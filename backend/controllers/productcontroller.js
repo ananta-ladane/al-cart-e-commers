@@ -1,5 +1,3 @@
-const { json } = require("body-parser");
-const { jsx } = require("react/jsx-runtime");
 
 const Product = require("../model/productopertion").Product;
 
