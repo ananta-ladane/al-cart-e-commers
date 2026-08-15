@@ -146,11 +146,11 @@ exports.verifysession = (req, res) => {
     let veid = req.session.eid
 
     if (!veid) {
-        res.json({ status: false })
+        res.json({ status: false , seid : veid })
         console.log("session not found")
     } else {
 
-        res.json({ status: true })
+        res.json({ status: true , seid: veid})
     }
 }
 
