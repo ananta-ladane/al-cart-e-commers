@@ -26,13 +26,9 @@ app.use(session({
     }
 }))
 
-const allowedOrigins = [
-    "http://localhost:3000",
-    "https://ananta-ladane.github.io"
-];
 
 app.use(cors({
-    origin: allowedOrigins,
+    origin: "https://ananta-ladane.github.io",
     credentials: true
 }));
 
