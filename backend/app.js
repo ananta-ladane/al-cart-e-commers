@@ -10,12 +10,20 @@ const session = require("express-session");
 const mongosescon = require("connect-mongodb-session")(session);
 
 
+
+
+app.set("trust proxy", 1);
+
+app.use(cors({
+    origin: "https://ananta-ladane.github.io",
+    credentials: true
+}));
+
 const store = new mongosescon({
     uri: process.env.MONGO_URI,
     databaseName: "developer",
     collection: "sessions"
 })
-
 
 
 app.use(session({
@@ -32,11 +40,6 @@ app.use(session({
 }))
 
 
-
-app.use(cors({
-    origin: "https://ananta-ladane.github.io",
-    credentials: true
-}));
 
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: false }));
