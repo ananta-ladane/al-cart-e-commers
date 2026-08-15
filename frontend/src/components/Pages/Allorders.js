@@ -14,7 +14,7 @@ const Allorders = () => {
 
     useEffect(() => {
 
-        axios.get("http://localhost:5000/getallorders", { withCredentials: true }).then((success) => {
+        axios.get("https://al-cart-e-commers.onrender.com/getallorders", { withCredentials: true }).then((success) => {
             console.log(success)
             setAodata(success.data)
         }).catch((error) => {

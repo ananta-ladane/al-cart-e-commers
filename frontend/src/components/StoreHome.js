@@ -13,7 +13,7 @@ const StoreHome = () => {
 
     useEffect(() => {
 
-        axios.get("http://localhost:5000/sessionverify", { withCredentials: true }).then((success) => {
+        axios.get("https://al-cart-e-commers.onrender.com/sessionverify", { withCredentials: true }).then((success) => {
             console.log(success)
             if (success.data.status == !true) {
                 navigate("/login")

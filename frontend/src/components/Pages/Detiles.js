@@ -27,7 +27,7 @@ const Detiles = () => {
 
     useEffect(() => {
 
-        axios.get("http://localhost:5000/getproducts").then((success) => {
+        axios.get("https://al-cart-e-commers.onrender.com/getproducts").then((success) => {
             console.log(success)
             setProduct(success.data)
         }).catch((error) => {
@@ -66,7 +66,7 @@ const Detiles = () => {
         let pdis = x.pdis;
         let price = x.price
 
-        axios.post("http://localhost:5000/addtocaard", { pid, url, pname, pdis, price }, { withCredentials: true }).then((success) => {
+        axios.post("https://al-cart-e-commers.onrender.com/addtocaard", { pid, url, pname, pdis, price }, { withCredentials: true }).then((success) => {
             console.log(success)
         }).catch((error) => {
             console.log(error)

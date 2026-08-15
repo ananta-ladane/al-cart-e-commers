@@ -36,7 +36,7 @@ const Buyproduct = () => {
 
         let id = x._id
 
-        axios.post(`http://localhost:5000/dopayment/${id}`).then((success) => {
+        axios.post(`https://al-cart-e-commers.onrender.com/dopayment/${id}`).then((success) => {
             console.log(success)
 
             if (success.data.acknowledged == true) {

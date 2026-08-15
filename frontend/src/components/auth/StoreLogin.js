@@ -29,7 +29,7 @@ const StoreLogin = () => {
         console.log(email)
         console.log(pass)
 
-        axios.post("http://localhost:5000/storelogin", { Email: email, Pass: pass }).then((success) => {
+        axios.post("https://al-cart-e-commers.onrender.com/storelogin", { Email: email, Pass: pass }).then((success) => {
             console.log(success)
             if (success.data.length > 0) {
                 console.log("login successfully")

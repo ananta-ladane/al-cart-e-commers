@@ -18,7 +18,7 @@ const Orderdet = () => {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:5000/tractoder/${id}`).then((success) => {
+        axios.get(`https://al-cart-e-commers.onrender.com/tractoder/${id}`).then((success) => {
             console.log(success)
             setOdata(success.data)
         }).catch((error) => {

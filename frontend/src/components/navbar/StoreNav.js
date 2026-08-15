@@ -20,7 +20,7 @@ const StoreNav = () => {
 
     const Logout = () => {
 
-        axios.post("http://localhost:5000/logout", { withCredentials: true }).then((success) => {
+        axios.post("https://al-cart-e-commers.onrender.com/logout", { withCredentials: true }).then((success) => {
             console.log(success)
             if (success.data.status == true) {
                 console.log("logout successfully")

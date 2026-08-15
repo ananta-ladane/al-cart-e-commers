@@ -12,7 +12,7 @@ const UserProfile = () => {
 
     useEffect(() => {
 
-        axios.get("http://localhost:5000/getuserprofile", { withCredentials: true }).then((success) => {
+        axios.get("https://al-cart-e-commers.onrender.com/getuserprofile", { withCredentials: true }).then((success) => {
             console.log(success)
             setProfile(success.data)
         }).catch((error) => {

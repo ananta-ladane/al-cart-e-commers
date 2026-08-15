@@ -47,7 +47,7 @@ const Signup = () => {
             setAlert(true)
             return
         } else {
-            axios.post("http://localhost:5000/signup", { Username: uname, email: email, password: upass, role: role }).then((success) => {
+            axios.post("https://al-cart-e-commers.onrender.com/signup", { Username: uname, email: email, password: upass, role: role }).then((success) => {
                 console.log(success)
                 if (success.data.status === "Existed") {
                     setSucc(true)

@@ -28,7 +28,7 @@ const FindEmail = () => {
             setMemail(true)
 
         } else {
-            axios.post("http://localhost:5000/emailfind", { Email: email }).then((success) => {
+            axios.post("https://al-cart-e-commers.onrender.com/emailfind", { Email: email }).then((success) => {
                 console.log(success)
                 if (success.data.length > 0) {
                     console.log("Email verification successful.!")

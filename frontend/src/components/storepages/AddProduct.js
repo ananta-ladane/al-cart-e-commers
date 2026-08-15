@@ -38,7 +38,7 @@ const AddProduct = () => {
         console.log(pdis)
         console.log(price)
 
-        axios.post("http://localhost:5000/addproduct", { Url: url, Pname: pname, Pdis: pdis, Price: price }, { withCredentials: true }).then((success) => {
+        axios.post("https://al-cart-e-commers.onrender.com/addproduct", { Url: url, Pname: pname, Pdis: pdis, Price: price }, { withCredentials: true }).then((success) => {
             console.log(success)
         }).catch((error) => {
             console.log(error)

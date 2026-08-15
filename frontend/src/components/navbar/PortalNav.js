@@ -26,7 +26,7 @@ const PortalNav = () => {
     const pcount = pdata.length;
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/getcardproduct`, { withCredentials: true }).then((success) => {
+        axios.get(`https://al-cart-e-commers.onrender.com/getcardproduct`, { withCredentials: true }).then((success) => {
             console.log(success)
             setPdata(success.data)
         }).catch((error) => {
@@ -48,7 +48,7 @@ const PortalNav = () => {
 
     const logout = () => {
 
-        axios.post("http://localhost:5000/logout", { withCredentials: true }).then((success) => {
+        axios.post("https://al-cart-e-commers.onrender.com/logout", { withCredentials: true }).then((success) => {
             console.log(success)
             if (success.data.status == true) {
                 console.log("logout successfully")

@@ -43,7 +43,7 @@ const StoreSig = () => {
         console.log(name)
         console.log(email)
 
-        axios.post("http://localhost:5000/storeadd", {
+        axios.post("https://al-cart-e-commers.onrender.com/storeadd", {
             name: name,
             email: email,
             city: city,

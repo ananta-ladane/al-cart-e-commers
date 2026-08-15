@@ -14,7 +14,7 @@ const AllProduct = () => {
 
     useEffect(() => {
 
-        axios.get("http://localhost:5000/showstoreproducts", { withCredentials: true }).then((success) => {
+        axios.get("https://al-cart-e-commers.onrender.com/showstoreproducts", { withCredentials: true }).then((success) => {
             console.log(success)
             setPdata(success.data)
         }).catch((error) => {
@@ -35,7 +35,7 @@ const AllProduct = () => {
         console.log("this is thr delete product data id")
 
         let id = p._id;
-        axios.post(`http://localhost:5000/deletepro/${id}`).then((success) => {
+        axios.post(`https://al-cart-e-commers.onrender.com/deletepro/${id}`).then((success) => {
             console.log(success)
             if(success.data.deletedCount === 1){
                 navigate(0)

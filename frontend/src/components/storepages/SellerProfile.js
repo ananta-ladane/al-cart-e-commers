@@ -11,7 +11,7 @@ const SellerProfile = () => {
 
     useEffect(() => {
 
-        axios.get("http://localhost:5000/sellerprofile", { withCredentials: true }).then((success) => {
+        axios.get("https://al-cart-e-commers.onrender.com/sellerprofile", { withCredentials: true }).then((success) => {
             console.log(success)
             setProfile(success.data)
         }).catch((error) => {

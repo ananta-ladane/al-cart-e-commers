@@ -16,7 +16,7 @@ const AddCard = () => {
     const [pdata, setPdata] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/getcardproduct`, { withCredentials: true }).then((success) => {
+        axios.get(`https://al-cart-e-commers.onrender.com/getcardproduct`, { withCredentials: true }).then((success) => {
             console.log(success)
             setPdata(success.data)
         }).catch((error) => {
@@ -37,7 +37,7 @@ const AddCard = () => {
         console.log(p._id)
 
         let id = p._id;
-        axios.post(`http://localhost:5000/delprocard/${id}`).then((success) => {
+        axios.post(`https://al-cart-e-commers.onrender.com/delprocard/${id}`).then((success) => {
             console.log(success)
             if (success.data.acknowledged == true) {
                 navigate(0)

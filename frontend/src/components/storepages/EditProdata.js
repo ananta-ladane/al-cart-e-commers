@@ -25,7 +25,7 @@ const EditProdata = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/geteditprodctdata/${id}`).then((success) => {
+        axios.get(`https://al-cart-e-commers.onrender.com/geteditprodctdata/${id}`).then((success) => {
             console.log(success)
             setPdata(success.data)
             setPurl(success.data.url)
@@ -62,7 +62,7 @@ const EditProdata = () => {
         console.log(pdis)
         console.log(price)
 
-        axios.post(`http://localhost:5000/uprodata/${id}`, { Purl: purl, Pname: pname, Pdis: pdis, Price: price }).then((success) => {
+        axios.post(`https://al-cart-e-commers.onrender.com/uprodata/${id}`, { Purl: purl, Pname: pname, Pdis: pdis, Price: price }).then((success) => {
             console.log(success)
 
             if(success.data.acknowledged == true){

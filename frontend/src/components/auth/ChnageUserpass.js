@@ -25,7 +25,7 @@ const ChangeUserpass = () => {
     const getData = () => {
         console.log(email)
 
-        axios.post("http://localhost:5000/updatepass", { Email: email, Pass: pass }).then((Success) => {
+        axios.post("https://al-cart-e-commers.onrender.com/updatepass", { Email: email, Pass: pass }).then((Success) => {
             console.log(Success)
             if (Success.data.modifiedCount === 1) {
                 console.log("successfully update password")
