@@ -27,10 +27,11 @@ app.use(session({
         httpOnly: true,
         secure: true,
         sameSite: "none"
+
     }
 }))
 
-app.set("trust proxy", 1);
+
 
 app.use(cors({
     origin: "https://ananta-ladane.github.io",
