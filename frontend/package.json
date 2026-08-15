@@ -2,7 +2,7 @@
   "name": "project_first",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ananta-ladane.github.io/al-cart-e-commers",
+  "homepage": "https://ananta-ladane.github.io/al-cart-e-commers/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
     "@testing-library/dom": "^10.4.1",
