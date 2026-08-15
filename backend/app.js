@@ -16,16 +16,21 @@ const store = new mongosescon({
     collection: "sessions"
 })
 
+
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     store: store,
     cookie: {
-        httpOnly: true
+        httpOnly: true,
+        secure: true,
+        sameSite: "none"
     }
 }))
 
+app.set("trust proxy", 1);
 
 app.use(cors({
     origin: "https://ananta-ladane.github.io",
