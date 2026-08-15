@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap');
+
+
+.main {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 254, 254);
+}
+
+.sub {
+    width: 95%;
+    margin: 7px auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.sub .log {
+    width: 45%;
+    font-size: 18PX;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sub .log .btn1 {
+    background: linear-gradient(135deg, #1E40AF 0%, #7C3AED 100%);
+    border: none;
+    padding: 0px 8px 5px 8px;
+    height: 35px;
+    margin-right: 5PX;
+    border-radius: 10px;
+
+
+}
+
+.sub .log .btn1 i {
+    color: white;
+    font-size: 15px;
+
+}
+
+.sub .log span {
+    color: #2453f0;
+}
+
+
+.sub1 {
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sub1 .btn2 {
+    width: 45%;
+    font-size: 14px;
+    height: 30px;
+    padding: 0;
+    background: none;
+    border: none;
+
+    font-weight: 500;
+
+}
+
+.sub1 .btn2 .lpa {
+    color: gray;
+
+}
+
+.sub1 .btn2 .lpa:hover {
+    color: black;
+}
+
+.sub1 .btn3 {
+    width: 50%;
+    font-size: 12px;
+    height: 30px;
+    padding: 0 5px;
+    background: linear-gradient(135deg, #1E40AF 0%, #7C3AED 100%);
+    border: none;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.sub1 .btn3 .lpa1 {
+    color: white;
+}
+
+.sub1 .btn3:hover {
+    background: linear-gradient(135deg, #214fe5 0%, #7C3AED 100%);
+    box-shadow: 0 0 3px rgb(8, 8, 8);
+}
+
+@media (min-width:576px) {
+
+    .main {
+        height: 65px;
+        padding-top: 3px;
+    }
+
+    .sub1 .btn2 {
+        font-size: 17px;
+    }
+
+    .sub1 .btn3 {
+        font-size: 17px;
+        padding: 0px 5px 4px 5px;
+        height: 35px;
+    }
+}
+
+
+@media (min-width:992px) {
+
+
+    .sub1 {
+        justify-content: end;
+    }
+
+    .sub1 .btn2 {
+        width: 20%;
+    }
+
+
+    .sub1 .btn3 {
+        width: 20%;
+    }
+}
+
+
+
+@media (min-width:1200px) {
+
+
+    .sub1 {
+        justify-content: end;
+    }
+
+    .sub1 .btn2 {
+        width: 20%;
+    }
+
+
+    .sub1 .btn3 {
+        width: 20%;
+    }
+}
+
+
+
+
+@media (min-width:1400px) {
+
+
+    .sub1 {
+        justify-content: end;
+    }
+
+    .sub1 .btn2 {
+        width: 20%;
+    }
+
+
+    .sub1 .btn3 {
+        width: 20%;
+    }
+}

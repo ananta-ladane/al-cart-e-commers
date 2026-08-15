@@ -1,0 +1,949 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url('https://fonts.cdnfonts.com/css/general-sans');
+
+
+
+
+
+.main {
+    width: 100%;
+
+}
+
+.alert {
+    width: 80%;
+    position: fixed;
+    background-color: red;
+    z-index: 2;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    margin-left: 10%;
+    top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.alert .cls {
+    border: none;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.alert p span {
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.sect1 {
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #faf5ff, rgba(128, 17, 240, 0.111));
+    padding-top: 70px;
+}
+
+.sect1di1 {
+    width: 100%;
+}
+
+.sect1sub1 p:nth-child(1) {
+    padding: 5px 10px;
+    border: 1px solid rgb(50, 45, 45);
+    border-radius: 15px;
+    width: 95%;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: rgb(241, 224, 203);
+    color: blueviolet;
+    font-family: 'Satoshi', system-ui, sans-serif;
+
+
+}
+
+.sect1sub1 h1 {
+    font-size: 45px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: 'General Sans', sans-serif;
+}
+
+.sect1sub1 h1 span {
+    background: linear-gradient(to right, rgba(57, 57, 113, 0.962), rgba(57, 45, 222, 0.726));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sect1sub1 p:nth-child(3) {
+    width: 90%;
+    margin-top: 18px;
+    font-size: 18px;
+    color: rgb(67, 67, 71);
+    font-family: 'General Sans', sans-serif;
+
+
+}
+
+.sect1sub1 .btns .btn1 {
+    width: 90%;
+    background: linear-gradient(to left, rgba(33, 33, 224, 0.873), rgba(112, 12, 235, 0.871));
+    border-radius: 10px;
+    padding: 15px 10px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-family: 'General Sans', sans-serif;
+
+}
+
+.sect1sub1 .btns .btn1:hover {
+    box-shadow: 0 0 5px rgb(65, 64, 64);
+}
+
+.sect1sub1 .btns .btn2 {
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 10px;
+    color: black;
+    border: 1PX solid gray;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    font-family: 'General Sans', sans-serif;
+}
+
+.sect1sub1 .btns .btn2:hover {
+    box-shadow: 0 0 5px rgb(66, 65, 65);
+}
+
+.sect1sub2 {
+    background-image: url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=1200");
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    width: 100%;
+    margin: 30px auto;
+    box-shadow: 0 0 10px rgb(14, 13, 13);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.sect1sub2di1 {
+    width: 80%;
+    height: 180px;
+
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+
+.sect1sub2di1 p:nth-child(1) {
+    text-transform: uppercase;
+    color: gray;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-family: 'General Sans', sans-serif;
+}
+
+.sect1sub2di1 p:nth-child(2) {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+    width: 80%;
+    margin-bottom: 0;
+    font-family: 'General Sans', sans-serif;
+}
+
+.sect1sub2di1 p:nth-child(3) {
+    text-transform: capitalize;
+    color: blueviolet;
+    font-weight: 600;
+    font-family: 'General Sans', sans-serif;
+}
+
+.sect2 {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.sect2di1 h1 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: 'General Sans', sans-serif;
+
+}
+
+.sect2di2 {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: 'General Sans', sans-serif;
+}
+
+.sect2sub1 {
+    width: 43%;
+    text-align: center;
+    box-shadow: 0 0 5px gray;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-family: 'Satoshi', system-ui, sans-serif;
+    transition: transform 0.6s ease
+}
+
+.sect2sub1:hover {
+    transform: translateY(-10px);
+}
+
+
+.sect3di2 figure {
+    width: 95%;
+    margin: 20px auto;
+
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.sect3di2 figure:hover {
+    box-shadow: 0 0 2px gray;
+}
+
+
+.figsub1 {
+    background-image: url("https://images.unsplash.com/photo-1660391532247-4a8ad1060817?q=80&w=881&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+}
+
+.figsub1 p:nth-child(1) {
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+    background-color: rgb(244, 240, 240);
+    padding: 3px 7px;
+    border-radius: 50%;
+    color: rgb(91, 88, 88);
+}
+
+figcaption {
+    padding-top: 20px;
+}
+
+figcaption p:nth-child(1) {
+    color: gold;
+}
+
+figcaption p:nth-child(1) span {
+    color: gray;
+}
+
+figcaption .hyp {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'General Sans', sans-serif;
+}
+
+figcaption .pri1 {
+    color: black;
+    font-family: 'Satoshi', system-ui, sans-serif;
+
+}
+
+figcaption .pri1 span {
+    color: rgb(170, 168, 168);
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.fibtn .btn3 {
+
+    padding: 5px 8px;
+    font-size: 13px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    margin-right: 20px;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.fibtn .btn3:hover {
+    box-shadow: 0 0 5px gray;
+}
+
+.fibtn .btn4 {
+    padding: 6px 9px;
+    font-size: 13px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.877);
+    color: white;
+    border: none;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.fibtn .btn4:hover {
+    box-shadow: 0 0 5px gray;
+}
+
+.figsub2 {
+    background-image: url("https://images.unsplash.com/photo-1561634343-3a2787687046?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+}
+
+.figsub2 p:nth-child(1) {
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+    background-color: rgb(223, 219, 219);
+    padding: 3px 7px;
+    border-radius: 50%;
+    color: rgb(91, 88, 88);
+}
+
+.figsub3 {
+    background-image: url("https://images.unsplash.com/photo-1698995475439-f6fa0734e30e?q=80&w=812&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+}
+
+.figsub3 p:nth-child(1) {
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+    background-color: rgb(223, 219, 219);
+    padding: 3px 7px;
+    border-radius: 50%;
+    color: rgb(91, 88, 88);
+}
+
+
+.figsub4 {
+    background-image: url("https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=600");
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+}
+
+.figsub4 p:nth-child(1) {
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+    background-color: rgb(223, 219, 219);
+    padding: 3px 7px;
+    border-radius: 50%;
+    color: rgb(91, 88, 88);
+}
+
+
+.sect4 {
+    width: 100%;
+}
+
+.sect4di1 h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: 'General Sans', sans-serif;
+}
+
+
+
+.sect4sub1 {
+    background: linear-gradient(to right, rgba(134, 3, 132, 0.766), rgba(160, 152, 152, 0.432)), url("https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&q=80&w=800");
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.6s ease
+
+}
+
+.sect4sub1:hover{
+    transform: translateY(-10px);
+}
+
+.sect4sub1 P:nth-child(1) {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'General Sans', sans-serif;
+}
+
+
+.sect4sub1 P:nth-child(2) {
+    color: white;
+    width: 90%;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.sect4sub1 P:nth-child(3) {
+    color: white;
+    margin-top: 0;
+    font-size: 18px;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+
+.sect4sub2 {
+    background: linear-gradient(to right, rgba(24, 2, 166, 0.718), rgba(160, 152, 152, 0.432)), url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&q=80&w=800");
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.6s ease
+
+}
+
+.sect4sub2:hover {
+    transform: translateY(-10px);
+}
+
+.sect4sub2 P:nth-child(1) {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'General Sans', sans-serif;
+}
+
+
+.sect4sub2 P:nth-child(2) {
+    color: white;
+    width: 90%;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.sect4sub2 P:nth-child(3) {
+    color: white;
+    margin-top: 0;
+    font-size: 18px;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+
+.sect4di2 .btn5 {
+    padding: 5px 15px;
+    border-radius: 18px;
+    background-color: rgb(253, 250, 250);
+    color: black;
+    font-weight: 600;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.sect5 {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sect5di1 h1 {
+    font-weight: 700;
+    font-family: 'General Sans', sans-serif;
+
+}
+
+.sect5di1 .btn6 {
+    padding: 12px 20px;
+    border-radius: 22px;
+    background-color: #111827;
+    font-size: 15px;
+    width: 80%;
+    text-transform: capitalize;
+    margin-left: 25px;
+    border: none;
+    font-family: 'Satoshi', system-ui, sans-serif;
+
+}
+
+.sect5di1 .btn6:hover {
+    box-shadow: 0 0 5px gray;
+    scale: calc(0.8);
+}
+
+.foo {
+    width: 100%;
+    background-color: #111827;
+    padding-top: 40px;
+
+}
+
+.foodi1 {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.foodi1sub1 h2 {
+    color: white;
+    font-weight: 700;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+
+.foodi1sub1 P:nth-child(2) {
+    color: rgb(158, 158, 190);
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.foodi1sub1 P:nth-child(3) i {
+    color: rgb(158, 158, 190);
+    border: 1px solid white;
+    padding: 8px 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.foodi1sub1 P:nth-child(3) i:hover {
+    box-shadow: 0 0 5px white;
+}
+
+.foodi1sub4 h2 {
+    color: white;
+    margin-top: 29px;
+    text-transform: capitalize;
+    font-family: 'General Sans', sans-serif;
+}
+
+.foodi1sub4 ul li {
+    list-style: none;
+    margin-bottom: 4px;
+
+}
+
+.foodi1sub4 ul li a {
+    text-transform: capitalize;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.foodi1sub4 ul li a:hover {
+    color: white;
+
+}
+
+.foodi1sub2 h2 {
+    color: white;
+    margin-top: 29px;
+    text-transform: capitalize;
+    font-family: 'General Sans', sans-serif;
+}
+
+.foodi1sub2 ul li {
+    list-style: none;
+    margin-bottom: 4px;
+
+}
+
+.foodi1sub2 ul li a {
+    text-transform: capitalize;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.foodi1sub2 ul li a:hover {
+    color: white;
+
+}
+
+.foodi1sub3 h2 {
+    color: white;
+    margin-top: 29px;
+    text-transform: capitalize;
+    font-family: 'General Sans', sans-serif;
+}
+
+.foodi1sub3 ul li {
+    list-style: none;
+    margin-bottom: 4px;
+
+}
+
+.foodi1sub3 ul li a {
+    text-transform: capitalize;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.foodi1sub3 ul li a:hover {
+    color: white;
+
+}
+
+.foodi2 {
+    width: 100%;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.foodi2sub1 {
+    width: 80%;
+    margin: 10px auto;
+    color: rgb(158, 158, 190);
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+@media (min-width:576px) {
+
+    .sect1 {
+        padding-top: 90px;
+    }
+
+    .sect1sub1 p:nth-child(1) {
+        width: 60%;
+    }
+}
+
+@media (min-width:769px) {
+
+
+    .sect1sub1 {
+        width: 80%;
+
+    }
+
+    .alert {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .sect1sub1 .btns {
+        display: flex;
+        width: 80%;
+    }
+
+    .sect1sub1 .btns .btn2 {
+
+        height: 60px;
+    }
+
+    .sect1sub2 {
+        height: 400px;
+        margin-top: 40px;
+    }
+
+    .sect1sub2di1 {
+        position: absolute;
+        width: 35%;
+        height: 150px;
+        right: 5%;
+
+    }
+
+    .sect2 {
+        padding-bottom: 30px;
+    }
+
+    .sect2di1 {
+        margin-bottom: 50px;
+    }
+
+    .sect2sub1 {
+        width: 30%;
+    }
+
+    .sect3di2 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .sect3di2 figure {
+        width: 47%;
+    }
+
+    .figsub1 {
+        height: 320px;
+    }
+
+    .figsub2 {
+        height: 320px;
+    }
+
+    .figsub3 {
+        height: 320px;
+    }
+
+    .figsub4 {
+        height: 320px;
+    }
+
+    .sect4di2 {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .sect5 {
+        padding-top: 50px;
+    }
+
+    .sect5di1 .btn6 {
+        width: 50%;
+        margin-left: 24%;
+        margin-top: 20px;
+    }
+
+    .foodi1 {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .foodi1sub1 {
+        width: 45%;
+        margin-top: 29px;
+    }
+
+    .foodi1sub2 {
+        width: 60%;
+    }
+
+    .foodi1sub3 {
+        width: 30%;
+    }
+
+    .foodi1sub4 {
+        width: 30%;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+@media (min-width:992px) {
+
+    .sect1sub1 p:nth-child(1) {
+        width: 40%;
+    }
+
+    .sect3di2 .figsub1 {
+        height: 360px;
+    }
+
+    .sect3di2 .figsub2 {
+        height: 360px;
+    }
+
+    .sect3di2 .figsub3 {
+        height: 360px;
+    }
+
+    .sect3di2 .figsub4 {
+        height: 360px;
+    }
+
+    figcaption .hyp {
+        font-size: 23px;
+
+    }
+
+    figcaption .pri1 {
+        font-size: 20px;
+    }
+
+    figcaption .pri1 span {
+        font-size: 19px;
+    }
+
+    .fibtn {
+        width: 80%;
+    }
+
+    .fibtn .btn3 {
+        width: 40%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .fibtn .btn4 {
+        width: 40%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .sect4sub1 {
+        width: 47%;
+    }
+
+    .sect4sub2 {
+        width: 47%;
+    }
+}
+
+@media (min-width:1200px) {
+
+
+    .sect1 {
+        background: linear-gradient(to right, #faf5ff, rgba(128, 17, 240, 0.111));
+    }
+
+    .sect1di1 {
+        display: flex;
+        justify-content: space-evenly;
+        height: 600px;
+        padding-top: 40px;
+
+    }
+
+    .sect1sub1 {
+        width: 50%;
+    }
+
+    .sect1sub1 p:nth-child(1) {
+        width: 60%;
+    }
+
+    .btns {
+        width: 90%;
+    }
+
+    .btns .btn1 {
+        width: 45%;
+    }
+
+
+    .sect1sub2 {
+        width: 45%;
+    }
+
+    .sect1sub2di1 {
+        width: 20%;
+    }
+
+    .sect2sub1 {
+        width: 15%;
+    }
+
+    .sect3di2 figure {
+        width: 24%;
+    }
+
+    figcaption .hyp {
+        text-transform: capitalize;
+        font-size: 25px;
+    }
+
+    .fibtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .fibtn .btn3 {
+        padding: 7px 7px;
+        width: 50%;
+    }
+
+    .fibtn .btn4 {
+        padding: 7px 7px;
+    }
+
+    .sect4sub1 {
+        height: 250px;
+    }
+
+
+    .foodi1sub1 {
+        width: 28%;
+    }
+
+    .foodi1sub1 h2 {
+        font-size: 25px;
+    }
+
+    .foodi1sub1 ul {
+        margin-left: 0;
+    }
+
+
+    .foodi1sub2 {
+        width: 28%;
+    }
+
+    .foodi1sub2 h2 {
+        font-size: 25px;
+    }
+
+    .foodi1sub2 ul {
+        padding-left: 0;
+    }
+
+    .foodi1sub3 {
+        width: 18%;
+    }
+
+    .foodi1sub3 h2 {
+        font-size: 25px;
+    }
+
+    .foodi1sub3 ul {
+        padding-left: 0;
+    }
+
+
+    .foodi1sub4 {
+        width: 18%;
+    }
+
+    .foodi1sub4 h2 {
+        font-size: 25px;
+    }
+
+    .foodi1sub4 ul {
+
+        padding-left: 0;
+    }
+
+}
+
+@media (min-width:1400px) {
+
+
+    .sect1sub1 {
+        margin-top: 60px;
+    }
+
+    .sect1sub1 p:nth-child(1) {
+        width: 45%;
+    }
+
+    figcaption .hyp {
+        text-transform: capitalize;
+        font-size: 29px;
+    }
+}

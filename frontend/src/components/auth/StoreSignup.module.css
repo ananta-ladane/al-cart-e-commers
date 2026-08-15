@@ -1,0 +1,39 @@
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.sub{
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sub1{
+    width: 80%;
+    margin: 0 auto
+}
+
+.sub1 input{
+    width: 100%;
+    padding: 8px;
+}
+
+.btn1{
+    padding: 8px 13px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: linear-gradient(to left, rgba(33, 33, 224, 0.873), rgba(112, 12, 235, 0.871));
+    color: white;
+    width: 50%;
+    font-weight: 700;
+    border: none;
+    margin-top: 10px;
+}

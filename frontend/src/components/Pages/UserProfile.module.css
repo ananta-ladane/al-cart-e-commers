@@ -1,0 +1,54 @@
+.main {
+    width: 100%;
+}
+
+.sub {
+    width: 90%;
+    margin: 50px auto;
+    box-shadow: 0 0 3px grey;
+    padding: 30px 15px;
+    border-radius: 10px;
+
+}
+
+.sub1 {
+    line-height: 1;
+}
+
+
+@media (min-width:576px) {
+
+    .sub {
+        width: 60%;
+    }
+}
+
+@media (min-width:769px) {
+
+    .sub {
+        width: 50%;
+    }
+}
+
+@media (min-width:992px) {
+
+    .sub {
+        width: 40%;
+    }
+}
+
+
+@media (min-width:1200px) {
+
+    .sub {
+        width: 30%;
+    }
+}
+
+
+@media (min-width:1400px) {
+
+    .sub {
+        width: 25%;
+    }
+}

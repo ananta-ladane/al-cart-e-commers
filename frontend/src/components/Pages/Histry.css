@@ -1,0 +1,25 @@
+.His-pro {
+
+    width: 100%;
+    background-color:  #F1F5F9;
+    padding: 10px;
+    height: 100vh;
+    text-align: center;
+}
+
+
+
+.item-det {
+    width: 70%;
+    height: 50px;
+    margin: 30px auto;
+    border: 1px solid rgb(19, 18, 17);
+    box-shadow: 0 0 5px gray;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #FFFFFF;;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+
+}

@@ -1,0 +1,39 @@
+import axios from "axios";
+
+import StoreNav from "./navbar/StoreNav";
+import { useEffect } from "react";
+import { Outlet, useNavigate } from "react-router";
+
+
+
+const StoreHome = () => {
+
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+
+        axios.get("http://localhost:5000/sessionverify", { withCredentials: true }).then((success) => {
+            console.log(success)
+            if (success.data.status == !true) {
+                navigate("/login")
+            } else {
+                console.log("session found")
+            }
+        }).catch((error) => {
+            console.log(error)
+        })
+
+    }, [])
+
+    return (
+        <div>
+            <StoreNav />
+            <div>
+                <Outlet />
+            </div>
+        </div>
+    )
+}
+
+export default StoreHome;

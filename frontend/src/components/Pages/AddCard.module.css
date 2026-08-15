@@ -1,0 +1,173 @@
+.main {
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+
+.main h4 {
+    text-transform: capitalize;
+    margin-left: 15px;
+}
+
+
+.sub {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 0 3px black;
+    text-align: center;
+    padding: 15px 8px;
+
+}
+
+.card img {
+    width: 95%;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.card p:nth-child(2) {
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.card1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card1 .btn1 {
+    border: none;
+    background-color: rgb(233, 254, 0);
+    border-radius: 8px;
+    padding: 7px 19px 10px 19px;
+    color: black;
+    font-weight: 700;
+}
+
+.card1 .btn1:hover{
+    box-shadow: 0 0 3px black;
+}
+
+.card1 .btn2 {
+    background-color: gainsboro;
+    border: none;
+    padding: 5px 19px 8px 19px;
+    border-radius: 8px;
+    color: black;
+    font-weight: 700;
+}
+
+.card1 .btn2:hover{
+    box-shadow: 0 0 3px black;
+}
+
+
+@media (min-width:576px) {
+
+    .card {
+        width: 60%;
+        margin: 50px auto;
+    }
+
+    .card p:nth-child(3) {
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .card p:nth-child(4) {
+        font-weight: 700;
+        margin-top: 10px;
+
+
+    }
+}
+
+
+@media (min-width:769px) {
+
+
+    .sub{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .card {
+        width: 45%;
+        margin: 50px auto;
+    }
+}
+
+@media (min-width:992px) {
+
+
+    .sub {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 30%;
+        margin: 30px auto;
+    }
+
+    .card img {
+        height: 250px;
+    }
+
+
+}
+
+
+@media (min-width:1200px) {
+
+
+    .sub {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 23%;
+        margin: 30px auto;
+    }
+
+    .card img {
+        height: 300px;
+    }
+
+}
+
+@media (min-width:1400px) {
+
+
+    .sub {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 23%;
+        margin: 30px auto;
+    }
+
+    .card img {
+        height: 300px;
+    }
+
+}
