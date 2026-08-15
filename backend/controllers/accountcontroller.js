@@ -143,7 +143,9 @@ exports.sellerprofi = (req, res) => {
 
 exports.verifysession = (req, res) => {
 
-    if (req.session.eid) {
+    let veid = req.session.eid
+
+    if (veid) {
         res.json({ status: true })
     } else {
         console.log("session not found")
