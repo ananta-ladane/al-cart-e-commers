@@ -34,16 +34,7 @@ app.use(cors({
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: false }));
 
-app.get("/homepage", (req, res) => {
-    res.send("hello this is the e-coomers backend check-up");
-})
 
-app.get("/server-info", (req, res) => {
-    res.json({
-        message: "Request handled successfully",
-        processId: process.pid
-    });
-});
 
 app.use(router);
 
