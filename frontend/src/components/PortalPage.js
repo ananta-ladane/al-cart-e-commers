@@ -27,7 +27,8 @@ const PortalPage = () => {
         axios.get("https://al-cart-e-commers.onrender.com/sessionverify", { withCredentials: true }).then((success) => {
             console.log(success)
             if (success.data.status == false) {
-                navigate("/login")
+                // navigate("/login")
+                console.log("session not fonund")
             } else {
                 console.log("session found")
             }
