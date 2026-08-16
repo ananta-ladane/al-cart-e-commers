@@ -19,6 +19,8 @@ app.use(cors({
     credentials: true
 }));
 
+app.use(express.json());
+
 const store = new mongosescon({
     uri: process.env.MONGO_URI,
     databaseName: "developer",
@@ -41,7 +43,7 @@ app.use(session({
 
 
 
-app.use(express.json());
+
 app.use(bodyparser.urlencoded({ extended: false }));
 
 
