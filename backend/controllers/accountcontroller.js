@@ -108,6 +108,12 @@ exports.loginaccount = (req, res) => {
 
 exports.verifysession = (req, res) => {
 
+
+
+    onsole.log("SESSION ID:", req.sessionID);
+    console.log("SESSION:", req.session);
+    console.log("COOKIE:", req.headers.cookie);
+
     let eid = req.session.eid
 
     if (!eid) {
