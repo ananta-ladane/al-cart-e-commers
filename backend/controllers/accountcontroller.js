@@ -106,6 +106,19 @@ exports.loginaccount = (req, res) => {
 
 }
 
+exports.verifysession = (req, res) => {
+
+    let eid = req.session.eid
+
+    if (!eid) {
+        res.json({ status: false, seid: eid })
+        console.log("session not found")
+    } else {
+
+        res.json({ status: true, seid: eid })
+    }
+}
+
 
 exports.userprofile = (req, res) => {
 
@@ -141,18 +154,7 @@ exports.sellerprofi = (req, res) => {
 
 
 
-exports.verifysession = (req, res) => {
 
-    let eid = req.session.eid
-
-    if (!eid) {
-        res.json({ status: false , seid: eid })
-        console.log("session not found")
-    } else {
-
-        res.json({ status: true , seid: eid})
-    }
-}
 
 
 exports.logout = (req, res) => {
