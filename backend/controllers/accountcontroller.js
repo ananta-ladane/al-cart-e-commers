@@ -114,14 +114,14 @@ exports.verifysession = (req, res) => {
     console.log("SESSION:", req.session);
     console.log("COOKIE:", req.headers.cookie);
 
-    let eid = req.session.eid
+   
 
-    if (!eid) {
-        res.json({ status: false, seid: eid })
+    if (!req.session.eid) {
+        res.json({ status: false })
         console.log("session not found")
     } else {
 
-        res.json({ status: true, seid: eid })
+        res.json({ status: true})
     }
 }
 
