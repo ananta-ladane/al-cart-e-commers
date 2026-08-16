@@ -143,7 +143,7 @@ exports.sellerprofi = (req, res) => {
 
 exports.verifysession = (req, res) => {
 
-    let veid = req.session.eid
+    let eid = req.session.eid
 
     if (!eid) {
         res.json({ status: false , seid: eid })
