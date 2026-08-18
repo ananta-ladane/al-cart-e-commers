@@ -47,7 +47,7 @@ const Login = () => {
                     withCredentials: true
                 }).then((success) => {
                     console.log(success)
-
+                       
                     if (success.data.status === 1 && success.data.role === "user") {
                         navigate("/poratlpage")
                     } else if (success.data.status === 1 && success.data.role === "seller") {
