@@ -4,6 +4,9 @@ const Account = require("../model/accountopertions").Account;
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 
+const jwt = require("jsonwebtoken");
+
+
 
 
 
@@ -77,19 +80,34 @@ exports.loginaccount = (req, res) => {
                 if (!success) {
                     res.json({ status: false })
                 } else {
-                    req.session.eid = eid;
+                    // req.session.eid = eid;
 
-                    req.session.save((err) => {
+                    // req.session.save((err) => {
 
-                        if (err) {
-                            console.log(err);
-                            console.log("Session notSaved");
+                    //     if (err) {
+                    //         console.log(err);
+                    //         console.log("Session notSaved");
+                    //     }
+                    //     console.log("Session Saved");
+                    // });
+
+                    // console.log("this  is the session id" + req.session.eid)
+
+
+                    const jwt = require("jsonwebtoken");
+
+                    const token = jwt.sign(
+                        {
+                            id: user._id,
+                            role: user.role,
+                            email: user.email
+                        },
+                        process.env.JWT_SECRET,
+                        {
+                            expiresIn: "1d"
                         }
-                        console.log("Session Saved");
-                    });
-
-                    console.log("this  is the session id" + req.session.eid)
-                    res.json({ status: 1, role: role })
+                    );
+                    res.json({ status: 1, role: role, token: token })
                 }
 
             }).catch((error) => {
@@ -114,14 +132,14 @@ exports.verifysession = (req, res) => {
     console.log("SESSION:", req.session);
     console.log("COOKIE:", req.headers.cookie);
 
-   
+
 
     if (!req.session.eid) {
         res.json({ status: false })
         console.log("session not found")
     } else {
 
-        res.json({ status: true})
+        res.json({ status: true })
     }
 }
 
