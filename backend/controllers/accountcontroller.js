@@ -98,9 +98,8 @@ exports.loginaccount = (req, res) => {
 
                     const token = jwt.sign(
                         {
-                            id: user._id,
-                            role: user.role,
-                            email: user.email
+                            
+                            email: success.email
                         },
                         process.env.JWT_SECRET,
                         {
