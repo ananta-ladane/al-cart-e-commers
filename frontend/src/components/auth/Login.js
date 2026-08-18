@@ -42,10 +42,8 @@ const Login = () => {
             console.log("fill the info")
         } else {
 
-            axios.post("https://al-cart-e-commers.onrender.com/login", { email: email, password: upass, role: role },
-                {
-                    withCredentials: true
-                }).then((success) => {
+            axios.post("https://al-cart-e-commers.onrender.com/login", { email: email, password: upass, role: role }
+            ).then((success) => {
                     console.log(success)
                        
                     if (success.data.status === 1 && success.data.role === "user") {
