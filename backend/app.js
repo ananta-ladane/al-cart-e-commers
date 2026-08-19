@@ -14,7 +14,7 @@ const cors = require("cors");
 
 app.set("trust proxy", 1);
 
-app.use(cors({ origin: "https://ananta-ladane.github.io/" }));
+app.use(cors({ origin: "https://ananta-ladane.github.io/", credentials: true }));
 
 app.use(express.json());
 
