@@ -7,6 +7,7 @@ const { accountnew, loginaccount, verifysession, logout, userprofile, sellerprof
 const { inserorderdata, getcomfurmpro, paymentstatus, currentord, getallordersdata } = require("../controllers/ordercontroller");
 const { createRazorpayOrder, verifyPayment } = require("../controllers/paymentcontroller");
 const { loginratelimit } = require("../middleware/ratelimitlogin");
+const { verifyToken } = require("../middleware/tokenverify");
 const router = exprees.Router();
 
 
@@ -29,7 +30,7 @@ router.post("/confirmproduct", inserorderdata);
 
 //addtocaerd url end point
 router.post("/delprocard/:id", prodelcard)
-router.get("/getcardproduct", getcarddata)
+router.get("/getcardproduct", verifyToken, getcarddata)
 router.post("/addtocaard", productasdd)
 
 //product url end point
@@ -51,7 +52,7 @@ router.get("/sessionverify", verifysession)
 
 //account url end points
 router.get("/sellerprofile", sellerprofi)
-router.get("/getuserprofile", userprofile)
+router.get("/getuserprofile", verifyToken, userprofile)
 router.post("/deletepro/:id", prodeldata)
 
 router.post("/updatepass", newpassuser)

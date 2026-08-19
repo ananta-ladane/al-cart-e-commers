@@ -28,7 +28,7 @@ exports.productasdd = (req, res) => {
 
 exports.getcarddata = (req, res) => {
 
-    let eid = req.session.eid;
+    let eid = req.user.email;
     console.log("this is the user eid for add to card" + eid)
 
     let data = new Acard();

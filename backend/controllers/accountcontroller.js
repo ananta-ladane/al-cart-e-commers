@@ -71,8 +71,8 @@ exports.loginaccount = (req, res) => {
         console.log(success)
 
         if (success.length > 0) {
-            const eid = success[0].email;
-            const role = success[0].role;
+            let eid = success[0].email;
+            let role = success[0].role;
             let hashstore = success[0].password;
             // console.log(hashstore)
 
@@ -94,18 +94,23 @@ exports.loginaccount = (req, res) => {
                     // console.log("this  is the session id" + req.session.eid)
 
 
+
                     const jwt = require("jsonwebtoken");
 
-                    const token = jwt.sign(
-                        {
-                            
-                            email: success.email
-                        },
+                    const token = jwt.sign({
+                        email: eid
+                         },
                         process.env.JWT_SECRET,
                         {
                             expiresIn: "1d"
                         }
                     );
+
+                    // const decoded = jwt.decode(token);
+
+                    // console.log(decoded.email);
+
+
                     res.json({ status: 1, role: role, token: token })
                 }
 
@@ -145,8 +150,10 @@ exports.verifysession = (req, res) => {
 
 exports.userprofile = (req, res) => {
 
-    let eid = req.session.eid;
+    let eid = req.user.email;
 
+    console.log(eid)
+    console.log("this email get from verifyed token")
     let data = new Account();
 
     let result = data.fuserprofile(eid)
