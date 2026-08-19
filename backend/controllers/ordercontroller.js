@@ -9,7 +9,7 @@ exports.inserorderdata = (req, res) => {
     let quantity = req.body.Count;
     let tprice = req.body.Totalprice;
 
-    let eid = req.session.eid;
+    let eid = req.user.email;
 
     let data = new OrderProduct();
 
@@ -81,7 +81,7 @@ exports.currentord = (req, res) => {
 exports.getallordersdata = (req, res) => {
     console.log("this is get all orders")
 
-    let eid = req.session.eid;
+    let eid = req.user.email;
 
     console.log(eid)
     let data = new OrderProduct();

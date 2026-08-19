@@ -22,11 +22,11 @@ router.post("/create-razorpay-order", createRazorpayOrder);
 
 
 //order product  url end point
-router.get("/getallorders", getallordersdata)
+router.get("/getallorders", verifyToken, getallordersdata)
 router.get("/tractoder/:id", currentord);
 router.post("/dopayment/:id", paymentstatus);
 router.get("/comforproductdata/:id", getcomfurmpro);
-router.post("/confirmproduct", inserorderdata);
+router.post("/confirmproduct", verifyToken, inserorderdata);
 
 //addtocaerd url end point
 router.post("/delprocard/:id", prodelcard)

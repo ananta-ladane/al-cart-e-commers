@@ -95,7 +95,7 @@ exports.loginaccount = (req, res) => {
 
 
 
-                    const jwt = require("jsonwebtoken");
+                   
 
                     const token = jwt.sign({
                         email: eid
