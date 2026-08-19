@@ -4,12 +4,14 @@ const OrderProduct = require("../model/orderpopertions").OrderProduct;
 exports.inserorderdata = (req, res) => {
 
     console.log(req.body)
+    let eid = req.user.email;
     let pid = req.body.Pid;
     let sid = req.body.Sid;
     let quantity = req.body.Count;
     let tprice = req.body.Totalprice;
 
-    let eid = req.user.email;
+    console.log(eid)
+
 
     let data = new OrderProduct();
 
