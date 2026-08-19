@@ -24,30 +24,29 @@ const PortalPage = () => {
 
     useEffect(() => {
 
-        axios.get("https://al-cart-e-commers.onrender.com/sessionverify", { withCredentials: true }).then((success) => {
-            console.log(success)
-            if (success.data.status == false) {
-                // navigate("/login")
-                console.log("session not fonund")
-            } else {
-                console.log("session found")
-            }
-        }).catch((error) => {
-            console.log(error)
-        })
+        const token = localStorage.getItem("token")
 
-    }, [])
+        console.log(token)
+        if (!token) {
+            navigate("/login")
+            console.log("token not fonund")
+        } else {
+            console.log("session found")
+        }
+   
 
+}, [])
 
 
-    return (
+
+return (
+    <div>
+        <PortalNav />
         <div>
-            <PortalNav />
-            <div>
-                <Outlet />
-            </div>
+            <Outlet />
         </div>
-    )
+    </div>
+)
 }
 
 export default PortalPage;

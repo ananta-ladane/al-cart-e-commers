@@ -16,7 +16,11 @@ const AddCard = () => {
     const [pdata, setPdata] = useState([])
 
     useEffect(() => {
-        axios.get(`https://al-cart-e-commers.onrender.com/getcardproduct`, { withCredentials: true }).then((success) => {
+
+        const token = localStorage.getItem("token")
+        axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {headers: {
+            Authorization: `Bearer ${token}`
+        }}).then((success) => {
             console.log(success)
             setPdata(success.data)
         }).catch((error) => {

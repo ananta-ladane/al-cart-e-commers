@@ -44,24 +44,26 @@ const Login = () => {
 
             axios.post("https://al-cart-e-commers.onrender.com/login", { email: email, password: upass, role: role }
             ).then((success) => {
-                    console.log(success)
-                       
-                    if (success.data.status === 1 && success.data.role === "user") {
-                        navigate("/poratlpage")
-                    } else if (success.data.status === 1 && success.data.role === "seller") {
-                        navigate("/storehomepage")
+                console.log(success)
+                console.log(success.data.token)
+                if (success.data.status === 1 && success.data.role === "user") {
+                    localStorage.setItem("token", success.data.token);
+                    navigate("/poratlpage")
+                } else if (success.data.status === 1 && success.data.role === "seller") {
+                    localStorage.setItem("token", success.data.token);
+                    navigate("/storehomepage")
 
-                    } else {
-                        setAlert(true)
-                    }
+                } else {
+                    setAlert(true)
+                }
 
-                }).catch((error) => {
-                    console.log(error)
-                    if (error.response?.status === 429) {
-                        console.log(error.response.data.message)
-                        setManyreq(true)
-                    }
-                })
+            }).catch((error) => {
+                console.log(error)
+                if (error.response?.status === 429) {
+                    console.log(error.response.data.message)
+                    setManyreq(true)
+                }
+            })
 
         }
     }

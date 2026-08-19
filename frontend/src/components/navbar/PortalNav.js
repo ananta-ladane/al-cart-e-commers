@@ -26,7 +26,8 @@ const PortalNav = () => {
     const pcount = pdata.length;
 
     useEffect(() => {
-        axios.get(`https://al-cart-e-commers.onrender.com/getcardproduct`, { withCredentials: true }).then((success) => {
+        const token = localStorage.getItem("token")
+        axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {headers:{Authorization: `Bearer ${token}`}}).then((success) => {
             console.log(success)
             setPdata(success.data)
         }).catch((error) => {
@@ -48,22 +49,22 @@ const PortalNav = () => {
 
     const logout = () => {
 
-        axios.post("https://al-cart-e-commers.onrender.com/logout", { withCredentials: true }).then((success) => {
-            console.log(success)
-            if (success.data.status == true) {
-                console.log("logout successfully")
-                navigate("/login");
+        // axios.post("http://localhost:5000/logout").then((success) => {
+        //     console.log(success)
+        //     if (success.data.status == true) {
+        //         console.log("logout successfully")
+        //         navigate("/login");
 
-            } else {
-                console.log("logout filled plz try again")
-            }
-        }).catch((error) => {
-            console.log(error)
+        //     } else {
+        //         console.log("logout filled plz try again")
+        //     }
+        // }).catch((error) => {
+        //     console.log(error)
 
-        })
+        // })
 
-        // dispatcher(actions.logout());
-        // navigate("/login");
+        localStorage.removeItem("token");
+        navigate("/login");
     }
 
     const getProfile = () => {
