@@ -18,6 +18,7 @@ const AddCard = () => {
     useEffect(() => {
 
         const token = localStorage.getItem("token")
+        
         axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {headers: {
             Authorization: `Bearer ${token}`
         }}).then((success) => {

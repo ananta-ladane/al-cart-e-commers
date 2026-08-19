@@ -59,6 +59,9 @@ const Addtocard = () => {
         console.log("product found")
         console.log(product)
 
+        const token = localStorage.getItem("token")
+        console.log(token)
+         
         let pid = product._id;
         let sid = product.storeid;
 
@@ -113,10 +116,8 @@ const Addtocard = () => {
 
                                 razorpay_signature:
                                     response.razorpay_signature
-                            },
-                            {
-                                withCredentials: true
                             }
+                           
                         ).then((success) => {
                             console.log(success)
                             if (success.data) {
