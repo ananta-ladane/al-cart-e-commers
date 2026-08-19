@@ -62,13 +62,21 @@ const Addtocard = () => {
         let pid = product._id;
         let sid = product.storeid;
 
-        axios.post("https://al-cart-e-commers.onrender.com/confirmproduct", { Pid: pid, Sid: sid, Count: count, Totalprice: totalprice }, { withCredentials: true }).then((success) => {
+        axios.post("https://al-cart-e-commers.onrender.com/confirmproduct", { Pid: pid, Sid: sid, Count: count, Totalprice: totalprice }, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((success) => {
             console.log(success)
             let oid = success.data.insertedId;
             console.log(id)
             // navigate(`/Buyproduct/${id}`)
 
-            axios.post("https://al-cart-e-commers.onrender.com/create-razorpay-order", { oid: oid, amount: totalprice }, { withCredentials: true }).then((success) => {
+            axios.post("https://al-cart-e-commers.onrender.com/create-razorpay-order", { oid: oid, amount: totalprice }, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }).then((success) => {
 
                 console.log(success.data);
 
@@ -76,7 +84,7 @@ const Addtocard = () => {
 
                 let options = {
 
-                    key: process.env.REACT_APP_RAZORPAY_KEY_ID, 
+                    key: process.env.REACT_APP_RAZORPAY_KEY_ID,
 
                     amount: razorpayOrder.amount,
 
@@ -93,7 +101,7 @@ const Addtocard = () => {
 
                         console.log(response);
                         // navigate(`/Orderdet/${oid}`);
-                        axios.post( "https://al-cart-e-commers.onrender.com/verify-payment",
+                        axios.post("https://al-cart-e-commers.onrender.com/verify-payment",
                             {
                                 oid: oid,
 
