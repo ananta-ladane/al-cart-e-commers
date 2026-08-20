@@ -59,11 +59,11 @@ const Addtocard = () => {
         console.log("product found")
         console.log(product)
 
-        const token = localStorage.getItem("token")
+        let token = localStorage.getItem("token")
         console.log(token)
 
         let pid = product._id;
-        let sid = product.storeid;
+        let sid = product.eid;
 
         axios.post("https://al-cart-e-commers.onrender.com/confirmproduct", { Pid: pid, Sid: sid, Count: count, Totalprice: totalprice }, {
             headers: {
