@@ -37,7 +37,7 @@ router.post("/addtocaard", verifyToken, productasdd)
 router.post("/uprodata/:id", uproductdata) // seller api
 router.get("/geteditprodctdata/:id", editprodctdata)  // seller api
 router.get("/showstoreproducts", verifyToken, allstoreproducts) // seller api
-router.post("/getoneproduct/:id", getsingleproduct)
+router.post("/getoneproduct/:id", getsingleproduct) // user api
 router.post("/deletepro/:id", prodeldata) // seller api
 router.get("/getproducts", getproductdata) //no need to add token verify beacus this is usr api
 router.post("/addproduct", verifyToken, addProduct) //seler api

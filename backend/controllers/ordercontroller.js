@@ -9,7 +9,7 @@ exports.inserorderdata = (req, res) => {
     console.log("EMAIL:", req.user?.email);
 
     let eid = req.user?.email;
-
+                          
     console.log("EID:", eid);
     
 
