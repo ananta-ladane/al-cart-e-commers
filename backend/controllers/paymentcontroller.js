@@ -52,7 +52,7 @@ exports.createRazorpayOrder = (req, res) => {
 
         saveResult.then((saved) => {
 
-            console.log("Razorpay order ID saved");
+            console.log("Razorpay order ID saved" + saved);
 
             res.json({ success: true, order: success });
 
