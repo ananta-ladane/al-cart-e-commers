@@ -65,7 +65,7 @@ const Addtocard = () => {
         let pid = product._id;
         let sid = product.storeid;
 
-        axios.post("http://localhost:5000/confirmproduct", { Pid: pid, Sid: sid, Count: count, Totalprice: totalprice }, {
+        axios.post("https://al-cart-e-commers.onrender.com/confirmproduct", { Pid: pid, Sid: sid, Count: count, Totalprice: totalprice }, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -75,7 +75,7 @@ const Addtocard = () => {
             console.log(id)
             // navigate(`/Buyproduct/${id}`)
 
-            axios.post("http://localhost:5000/create-razorpay-order", { oid: oid, amount: totalprice }
+            axios.post("https://al-cart-e-commers.onrender.com/create-razorpay-order", { oid: oid, amount: totalprice }
                ).then((success) => {
 
                 console.log(success.data);
@@ -101,7 +101,7 @@ const Addtocard = () => {
 
                         console.log(response);
                         // navigate(`/Orderdet/${oid}`);
-                        axios.post("http://localhost:5000/verify-payment",
+                        axios.post("https://al-cart-e-commers.onrender.com/verify-payment",
                             {
                                 oid: oid,
 

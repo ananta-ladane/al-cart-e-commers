@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
+
 import mystyle from './Detiles.module.css';
 // import { Link } from "react-router";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
-import { actions } from "../store";
+
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
@@ -14,9 +14,7 @@ import { useState } from "react";
 const Detiles = () => {
 
 
-    const user = useSelector((state) => { return state.currentUser })
-    const id = user;
-    console.log(id)
+    
 
     const navigate = useNavigate();
     const [product, setProduct] = useState([]);
@@ -44,7 +42,7 @@ const Detiles = () => {
 
     }, [])
 
-    const dispacher = useDispatch();
+    
 
     // const [count, setCount] = useState(0);
 
@@ -60,13 +58,15 @@ const Detiles = () => {
 
         // dispacher(actions.adCount())
 
+        let token = localStorage.getItem("token")
+
         let pid = x._id;
         let url = x.url;
         let pname = x.pname;
         let pdis = x.pdis;
         let price = x.price
 
-        axios.post("https://al-cart-e-commers.onrender.com/addtocaard", { pid, url, pname, pdis, price }, { withCredentials: true }).then((success) => {
+        axios.post("https://al-cart-e-commers.onrender.com/addtocaard", { pid, url, pname, pdis, price},{headers:{Authorization:`Bearer ${token}`}}).then((success) => {
             console.log(success)
         }).catch((error) => {
             console.log(error)

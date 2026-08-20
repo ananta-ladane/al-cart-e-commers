@@ -20,29 +20,34 @@ const StoreNav = () => {
 
     const Logout = () => {
 
-        axios.post("https://al-cart-e-commers.onrender.com/logout", { withCredentials: true }).then((success) => {
-            console.log(success)
-            if (success.data.status == true) {
-                console.log("logout successfully")
-                navigate("/login");
-            } else {
-                console.log("logout filled plz try again")
-            }
-        }).catch((error) => {
-            console.log(error)
 
-        })
+
+        // axios.post("https://al-cart-e-commers.onrender.com/logout", { headers: { Authorization: `Bearer ${token}` } }).then((success) => {
+        //     console.log(success)
+        //     if (success.data.status == true) {
+        //         console.log("logout successfully")
+        //         navigate("/login");
+        //     } else {
+        //         console.log("logout filled plz try again")
+        //     }
+        // }).catch((error) => {
+        //     console.log(error)
+
+        // })
+
+        localStorage.removeItem("token")
+         navigate("/login");
     }
 
     const addPro = () => {
         navigate("addproduct")
     }
 
-    const getPro = ()=>{
+    const getPro = () => {
         navigate("allstoreproduct")
     }
 
-    const getProfile = ()=>{
+    const getProfile = () => {
         navigate("sellerprofile")
     }
 

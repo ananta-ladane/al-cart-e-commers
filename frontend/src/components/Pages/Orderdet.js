@@ -1,9 +1,9 @@
-import { useSelector } from 'react-redux';
+
 import mystyle from './Orderdet.module.css';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import axios from 'axios';
-import { current } from '@reduxjs/toolkit';
+
 
 const Orderdet = () => {
     // const deliveryDate = new Date();

@@ -14,7 +14,8 @@ const AllProduct = () => {
 
     useEffect(() => {
 
-        axios.get("https://al-cart-e-commers.onrender.com/showstoreproducts", { withCredentials: true }).then((success) => {
+        let token = localStorage.getItem("token")
+        axios.get("https://al-cart-e-commers.onrender.com/showstoreproducts", {headers:{Authorization: `Bearer ${token}`}}).then((success) => {
             console.log(success)
             setPdata(success.data)
         }).catch((error) => {

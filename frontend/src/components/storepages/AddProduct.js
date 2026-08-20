@@ -38,7 +38,9 @@ const AddProduct = () => {
         console.log(pdis)
         console.log(price)
 
-        axios.post("https://al-cart-e-commers.onrender.com/addproduct", { Url: url, Pname: pname, Pdis: pdis, Price: price }, { withCredentials: true }).then((success) => {
+        let token = localStorage.getItem("token")
+
+        axios.post("https://al-cart-e-commers.onrender.com/addproduct", { Url: url, Pname: pname, Pdis: pdis, Price: price }, {headers:{Authorization:`Bearer ${token}`}}).then((success) => {
             console.log(success)
         }).catch((error) => {
             console.log(error)

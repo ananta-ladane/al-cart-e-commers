@@ -11,7 +11,8 @@ const SellerProfile = () => {
 
     useEffect(() => {
 
-        axios.get("https://al-cart-e-commers.onrender.com/sellerprofile", { withCredentials: true }).then((success) => {
+          let token = localStorage.getItem("token")
+        axios.get("https://al-cart-e-commers.onrender.com/sellerprofile", { headers:{Authorization:`Bearer ${token}`}}).then((success) => {
             console.log(success)
             setProfile(success.data)
         }).catch((error) => {

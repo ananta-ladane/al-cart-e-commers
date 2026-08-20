@@ -1,15 +1,14 @@
 
-import { useSelector } from 'react-redux';
 import mystyle from './AddCard.module.css';
-import { Link, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
 const AddCard = () => {
 
-    const user = useSelector((state) => { return state.currentUser })
-    const id = user
+    // const user = useSelector((state) => { return state.currentUser })
+    // const id = user
 
     const navigate = useNavigate()
 
@@ -18,10 +17,12 @@ const AddCard = () => {
     useEffect(() => {
 
         const token = localStorage.getItem("token")
-        
-        axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {headers: {
-            Authorization: `Bearer ${token}`
-        }}).then((success) => {
+
+        axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((success) => {
             console.log(success)
             setPdata(success.data)
         }).catch((error) => {
@@ -40,9 +41,9 @@ const AddCard = () => {
 
     const getRem = (p) => {
         console.log(p._id)
-
+        let token = localStorage.getItem("token")
         let id = p._id;
-        axios.post(`https://al-cart-e-commers.onrender.com/delprocard/${id}`).then((success) => {
+        axios.post(`https://al-cart-e-commers.onrender.com/delprocard/${id}`, { headers: { Authorization: `Bearer ${token}` } }).then((success) => {
             console.log(success)
             if (success.data.acknowledged == true) {
                 navigate(0)

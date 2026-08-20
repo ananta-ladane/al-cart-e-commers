@@ -1,10 +1,7 @@
-import { Outlet, useLocation, useNavigate } from "react-router";
-import PortalBody from "./mainbody/PortalBody";
+import { Outlet, useNavigate } from "react-router";
 import PortalNav from "./navbar/PortalNav";
-import { useDispatch, useSelector } from "react-redux";
-import { actions } from "./store";
+
 import { useEffect } from "react";
-import axios from "axios";
 
 
 
@@ -15,9 +12,9 @@ const PortalPage = () => {
 
     // const login = mystate.islogin;
     const navigate = useNavigate();
-    const dispatcher = useDispatch();
+   
 
-    const location = useLocation();
+   
 
     // const st = location.state.st ;
 
