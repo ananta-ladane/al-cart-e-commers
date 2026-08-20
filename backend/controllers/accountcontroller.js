@@ -168,7 +168,7 @@ exports.userprofile = (req, res) => {
 
 exports.sellerprofi = (req, res) => {
 
-    let eid = req.session.eid;
+    let eid = req.user.email;
 
     let data = new Account()
 

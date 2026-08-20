@@ -4,7 +4,7 @@ const Product = require("../model/productopertion").Product;
 
 exports.addProduct = (req, res) => {
 
-    let eid = req.session.eid;
+    let eid = req.user.email;
     let url = req.body.Url;
     let pname = req.body.Pname;
     let pdis = req.body.Pdis;

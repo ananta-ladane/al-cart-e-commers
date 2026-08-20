@@ -3,10 +3,8 @@ const Acard = require("../model/addtocardopertions").Acard;
 
 exports.productasdd = (req, res) => {
 
-    let usereid = req.session.eid;
-    console.log("this is the usereid of session" + usereid)
-    console.log("session:", req.session);
-    console.log("sessionID:", req.sessionID);
+    let usereid = req.user.email;
+    
 
     let pid = req.body.pid;
     let url = req.body.url;
@@ -20,6 +18,7 @@ exports.productasdd = (req, res) => {
 
     result.then((success) => {
         console.log(success)
+        res.json(success)
 
     }).catch((error) => {
         console.log(error)
@@ -47,7 +46,7 @@ exports.getcarddata = (req, res) => {
 exports.prodelcard = (req, res) => {
 
     let id = req.params.id;
-    let eid = req.session.eid
+    let eid = req.user.email;
 
     let data = new Acard();
 
