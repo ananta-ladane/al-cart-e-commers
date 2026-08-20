@@ -27,7 +27,7 @@ const PortalNav = () => {
 
     useEffect(() => {
         const token = localStorage.getItem("token")
-        axios.get("http://localhost:5000/getcardproduct", {headers:{Authorization: `Bearer ${token}`}}).then((success) => {
+        axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {headers:{Authorization: `Bearer ${token}`}}).then((success) => {
             console.log(success)
             setPdata(success.data)
         }).catch((error) => {
