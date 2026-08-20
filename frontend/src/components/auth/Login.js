@@ -42,6 +42,8 @@ const Login = () => {
             console.log("fill the info")
         } else {
 
+            // https://al-cart-e-commers.onrender.com
+
             axios.post("https://al-cart-e-commers.onrender.com/login", { email: email, password: upass, role: role }
             ).then((success) => {
                 console.log(success)
