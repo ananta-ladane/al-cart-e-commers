@@ -55,7 +55,7 @@ exports.getsingleproduct = (req, res) => {
 
 exports.allstoreproducts = (req, res) => {
 
-    let eid = req.session.eid;
+    let eid = req.user.email;
 
     let data = new Product();
 
