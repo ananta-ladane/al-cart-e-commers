@@ -8,9 +8,9 @@ exports.inserorderdata = (req, res) => {
     console.log("USER:", req.user);
     console.log("EMAIL:", req.user?.email);
 
-    let eid = req.user.email;
+    let usereid = req.user.email;
                           
-    console.log("EID:", eid);
+    console.log("EID:", usereid);
     
 
     let pid = req.body.Pid;
@@ -21,7 +21,7 @@ exports.inserorderdata = (req, res) => {
    
     let data = new OrderProduct();
 
-    let result = data.orderadd(pid, sid, eid, quantity, tprice);
+    let result = data.orderadd(pid, sid, usereid, quantity, tprice);
 
     result.then((success) => {
         console.log(success)
@@ -81,7 +81,7 @@ exports.currentord = (req, res) => {
     result.then((success) => {
         console.log(success)
         res.json(success)
-    }).catch((error) => {
+    }).catch((error) =>{
         console.log(error)
     })
 }

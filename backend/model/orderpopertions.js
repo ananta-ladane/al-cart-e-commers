@@ -5,13 +5,13 @@ const getdb = require("../utils/database").getdb;
 
 class OrderProduct {
 
-    orderadd(pid, sid, eid, quantity, tprice) {
+    orderadd(pid, sid, usereid, quantity, tprice) {
 
         let db = getdb();
 
         let proid = new ObjectId(pid)
 
-        let data = db.collection("orderpro").insertOne({ pid: proid, sid: sid, eid: eid, quantity: quantity, tprice: tprice, status: "0" }).then((success) => {
+        let data = db.collection("orderpro").insertOne({ pid: proid, sid: sid, eid: usereid, quantity: quantity, tprice: tprice, status: "0" }).then((success) => {
             console.log(success)
             return success
         }).catch((error) => {
