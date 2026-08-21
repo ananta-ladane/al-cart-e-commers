@@ -7,7 +7,7 @@ class Account {
 
         let db = getdb();
 
-        let chackemail = db.collection("eaccount").find({ email: email  }).toArray().then((success) => {
+        let chackemail = db.collection("eaccount").find({ email: email }).toArray().then((success) => {
             console.log(success)
 
             if (success.length === 0) {
@@ -44,6 +44,38 @@ class Account {
 
         return data
     }
+
+    femail(email) {
+
+        let db = getdb();
+
+        let data = db.collection("eaccount").find({ email: email }).toArray().then((success) => {
+            console.log(success)
+            return success
+        }).catch((error) => {
+            console.log(error)
+            return error
+        })
+
+        return data
+
+    }
+
+    upass(email, pass) {
+
+        let db = getdb();
+
+        let data = db.collection("eaccount").updateOne({ email: email }, { $set: { password: pass } }).then((success) => {
+            console.log(success)
+            return success
+        }).catch((error) => {
+            console.log(error)
+            return error
+        })
+
+        return data
+    }
+
 
     fuserprofile(usereid) {
 

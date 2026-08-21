@@ -20,7 +20,7 @@ exports.accountnew = (req, res) => {
 
     bcrypt.hash(pass, 10).then((success) => {
 
-        let data = new Account;
+        let data = new Account();
 
         let result = data.newaccount(username, email, role, success);
 
@@ -63,7 +63,7 @@ exports.loginaccount = (req, res) => {
     let pass = req.body.password;
     let role = req.body.role;
 
-    let data = new Account;
+    let data = new Account();
 
     let result = data.accountlogin(email, role)
 
@@ -95,11 +95,11 @@ exports.loginaccount = (req, res) => {
 
 
 
-                   
+
 
                     const token = jwt.sign({
                         email: eid
-                         },
+                    },
                         process.env.JWT_SECRET,
                         {
                             expiresIn: "1d"
@@ -111,7 +111,7 @@ exports.loginaccount = (req, res) => {
                     // console.log(decoded.email);
 
 
-                    res.json({role: role, token: token })
+                    res.json({ role: role, token: token })
                 }
 
             }).catch((err) => {
@@ -127,6 +127,50 @@ exports.loginaccount = (req, res) => {
     })
 
 }
+
+exports.emailget = (req, res) => {
+
+    let email = req.body.Email;
+    console.log(email)
+
+    let data = new Account();
+
+    let result = data.femail(email)
+
+    result.then((success) => {
+        console.log(success)
+        res.json(success)
+    }).catch((error) => {
+        console.log(error)
+    })
+}
+
+exports.newpassuser = (req, res) => {
+
+    let email = req.body.Email;
+    let pass = req.body.Pass;
+
+
+    bcrypt.hash(pass, 10).then((success) => {
+
+        let data = new Account();
+        let result = data.upass(email, success)
+
+        result.then((success) => {
+            console.log(success)
+            res.json(success)
+        }).catch((error) => {
+            console.log(error)
+        })
+
+    }).catch((error) => {
+        console.log(error)
+    })
+
+
+}
+
+
 
 exports.verifysession = (req, res) => {
 

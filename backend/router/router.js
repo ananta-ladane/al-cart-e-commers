@@ -1,9 +1,9 @@
 const exprees = require("express");
 const { storeinsert, storeloginn } = require("../controllers/storecontroller");
 const { addProduct, getproductdata, getsingleproduct, allstoreproducts, editprodctdata, prodeldata, uproductdata } = require("../controllers/productcontroller");
-const { emailget, newpassuser, } = require("../controllers/usercontroller");
+// const { emailget, newpassuser, } = require("../controllers/usercontroller");
 const { productasdd, getcarddata, prodelcard, } = require("../controllers/addtocardcontroller");
-const { accountnew, loginaccount, verifysession, logout, userprofile, sellerprofi } = require("../controllers/accountcontroller");
+const { accountnew, loginaccount, verifysession, logout, userprofile, sellerprofi, emailget, newpassuser } = require("../controllers/accountcontroller");
 const { inserorderdata, getcomfurmpro, paymentstatus, currentord, getallordersdata } = require("../controllers/ordercontroller");
 const { createRazorpayOrder, verifyPayment } = require("../controllers/paymentcontroller");
 const { loginratelimit } = require("../middleware/ratelimitlogin");
