@@ -1,5 +1,6 @@
 
 const User = require("../model/useropertions").User;
+const bcrypt = require("bcrypt");
 
 
 exports.emailget = (req, res) => {
