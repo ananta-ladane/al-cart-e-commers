@@ -76,8 +76,8 @@ exports.loginaccount = (req, res) => {
             let hashstore = success[0].password;
             // console.log(hashstore)
 
-            bcrypt.compare(pass, hashstore).then((success) => {
-                if (!success) {
+            bcrypt.compare(pass, hashstore).then((hsucc) => {
+                if (!hsucc) {
                     res.json({ status: false })
                 } else {
                     // req.session.eid = eid;
@@ -111,11 +111,11 @@ exports.loginaccount = (req, res) => {
                     // console.log(decoded.email);
 
 
-                    res.json({ status: 1, role: role, token: token })
+                    res.json({role: role, token: token })
                 }
 
-            }).catch((error) => {
-                console.log(error)
+            }).catch((err) => {
+                console.log(err)
             })
 
         } else {
