@@ -48,16 +48,21 @@ const Login = () => {
             ).then((success) => {
                 console.log(success)
                 console.log(success.data.token)
-                if (success.data.status === 1 && success.data.role === "user") {
-                    localStorage.setItem("token", success.data.token);
-                    navigate("/poratlpage")
-                } else if (success.data.status === 1 && success.data.role === "seller") {
-                    localStorage.setItem("token", success.data.token);
-                    navigate("/storehomepage")
 
-                } else {
+                if (success.data.status == false) {
                     setAlert(true)
                 }
+
+                if (success.data.role === "user") {
+                    localStorage.setItem("token", success.data.token);
+                    navigate("/poratlpage")
+                }
+
+                if (success.data.role === "seller") {
+                    localStorage.setItem("token", success.data.token);
+                    navigate("/storehomepage")
+                }
+
 
             }).catch((error) => {
                 console.log(error)
