@@ -15,7 +15,7 @@ const UserProfile = () => {
 
         console.log(token)
 
-        axios.get("http://localhost:5000/getuserprofile", {
+        axios.get("https://al-cart-e-commers.onrender.com/getuserprofile", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
