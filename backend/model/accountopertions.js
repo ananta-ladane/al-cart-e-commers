@@ -7,7 +7,7 @@ class Account {
 
         let db = getdb();
 
-        let chackemail = db.collection("eaccount").find({ $or: [{ email: email }, { role: role }] }).toArray().then((success) => {
+        let chackemail = db.collection("eaccount").find({ email: email  }).toArray().then((success) => {
             console.log(success)
 
             if (success.length === 0) {
@@ -45,11 +45,11 @@ class Account {
         return data
     }
 
-    fuserprofile(eid) {
+    fuserprofile(usereid) {
 
         let db = getdb();
 
-        let data = db.collection("eaccount").findOne({ email: eid }).then((success) => {
+        let data = db.collection("eaccount").findOne({ email: usereid }).then((success) => {
             console.log(success)
             return success
         }).catch((error) => {
@@ -61,10 +61,10 @@ class Account {
         return data
     }
 
-    fsellerpro(eid) {
+    fsellerpro(sellereid) {
         let db = getdb();
 
-        let data = db.collection("eaccount").findOne({ email: eid }).then((success) => {
+        let data = db.collection("eaccount").findOne({ email: sellereid }).then((success) => {
             console.log(success)
             return success
         }).catch((error) => {

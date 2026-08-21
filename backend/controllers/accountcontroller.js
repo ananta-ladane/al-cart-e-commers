@@ -150,13 +150,13 @@ exports.verifysession = (req, res) => {
 
 exports.userprofile = (req, res) => {
 
-    let eid = req.user.email;
+    let usereid = req.user.email;
 
     console.log(eid)
     console.log("this email get from verifyed token")
     let data = new Account();
 
-    let result = data.fuserprofile(eid)
+    let result = data.fuserprofile(usereid)
 
     result.then((success) => {
         console.log(success)
@@ -168,11 +168,11 @@ exports.userprofile = (req, res) => {
 
 exports.sellerprofi = (req, res) => {
 
-    let eid = req.user.email;
+    let sellereid = req.user.email;
 
     let data = new Account()
 
-    let result = data.fsellerpro(eid)
+    let result = data.fsellerpro(sellereid)
 
     result.then((success) => {
         console.log(success)
