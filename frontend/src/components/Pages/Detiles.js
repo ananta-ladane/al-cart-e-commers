@@ -32,6 +32,7 @@ const Detiles = () => {
             console.log(error)
         })
 
+       // https://al-cart-e-commers.onrender.com
         // axios.get("http://localhost:5000/getcardproduct", { withCredentials: true }).then((success) => {
         //     console.log(success)
         //     setPdata(success.data)

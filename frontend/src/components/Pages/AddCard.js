@@ -16,9 +16,10 @@ const AddCard = () => {
 
     useEffect(() => {
 
-        const token = localStorage.getItem("token")
+        let token = localStorage.getItem("token")
+        console.log("this is useeffect toekn :" + token)
 
-        axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {
+        axios.get("https://al-cart-e-commers.onrender.com", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -42,8 +43,13 @@ const AddCard = () => {
     const getRem = (p) => {
         console.log(p._id)
         let token = localStorage.getItem("token")
+        console.log("this is the getRem token: " + token)
         let id = p._id;
-        axios.post(`https://al-cart-e-commers.onrender.com/delprocard/${id}`, { headers: { Authorization: `Bearer ${token}` } }).then((success) => {
+        axios.delete(`https://al-cart-e-commers.onrender.com/delprocard/${id}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((success) => {
             console.log(success)
             if (success.data.acknowledged == true) {
                 navigate(0)
