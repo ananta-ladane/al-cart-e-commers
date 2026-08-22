@@ -29,7 +29,7 @@ router.get("/comforproductdata/:id", getcomfurmpro); // not working api
 router.post("/confirmproduct", verifyToken, inserorderdata); // user api
 
 //addtocaerd url end point
-router.post("/delprocard/:id", verifyToken, prodelcard)
+router.delete("/delprocard/:id", verifyToken, prodelcard)
 router.get("/getcardproduct", verifyToken, getcarddata)
 router.post("/addtocaard", verifyToken, productasdd)
 

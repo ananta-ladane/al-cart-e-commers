@@ -41,7 +41,8 @@ class Acard {
 
         let did = new ObjectId(id)
 
-        let data = db.collection("addtoacrd").deleteOne({ _id: did, eid: eid }).then((success) => {
+
+        let data = db.collection("addtoacrd").deleteOne({$and: [ {_id: did},{ usereid: eid }]}).then((success) => {
             console.log(success)
             return success
         }).catch((error) => {
