@@ -19,7 +19,7 @@ const AddCard = () => {
         let token = localStorage.getItem("token")
         console.log("this is useeffect toekn :" + token)
 
-        axios.get("https://al-cart-e-commers.onrender.com", {
+        axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -64,9 +64,9 @@ const AddCard = () => {
             <h4>this is the add card page</h4>
             <div className={mystyle.sub}>
                 {
-                    pdata.map((p, index) => {
+                    pdata.map((p) => {
                         return (
-                            <div className={mystyle.card} key = {index}>
+                            <div className={mystyle.card}>
 
                                 <img src={p.url} />
                                 <p>{p.pname}</p>
