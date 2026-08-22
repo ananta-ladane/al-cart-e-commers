@@ -48,6 +48,10 @@ exports.prodelcard = (req, res) => {
     let id = req.params.id;
     let eid = req.user.email;
 
+    console.log(id)
+    console.log(eid)
+    console.log("this is both ids such as usemail and proid")
+
     let data = new Acard();
 
     let result = data.rcardpro(id, eid)
