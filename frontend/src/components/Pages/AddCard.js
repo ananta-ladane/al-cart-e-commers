@@ -64,9 +64,9 @@ const AddCard = () => {
             <h4>this is the add card page</h4>
             <div className={mystyle.sub}>
                 {
-                    pdata.map((p) => {
+                    pdata.map((p, index) => {
                         return (
-                            <div className={mystyle.card}>
+                            <div className={mystyle.card} key = {index}>
 
                                 <img src={p.url} />
                                 <p>{p.pname}</p>
