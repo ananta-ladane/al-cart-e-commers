@@ -14,12 +14,14 @@ const cors = require("cors");
 
 app.set("trust proxy", 1);
 
-app.use(cors({
+app.use(cors(
+    {
     origin: "https://ananta-ladane.github.io",
     credentials: false,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
-}));
+}
+));
 
 app.use(express.json());
 
