@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import mystyle from "./Hostry.module.css";
+import mystyle from "./Histry.module.css";
 import axios from "axios";
 
 const Histry = () => {
