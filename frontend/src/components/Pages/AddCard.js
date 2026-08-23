@@ -17,7 +17,7 @@ const AddCard = () => {
     useEffect(() => {
 
         let token = localStorage.getItem("token")
-        console.log("this is useeffect toekn :" + token)
+        // console.log("this is useeffect toekn :" + token)
 
         axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {
             headers: {
@@ -34,7 +34,7 @@ const AddCard = () => {
 
     const getData = (p) => {
         let id = p.pid
-        console.log(id)
+        // console.log(id)
 
         navigate(`/addtocard/${id}`)
 

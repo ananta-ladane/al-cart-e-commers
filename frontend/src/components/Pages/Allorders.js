@@ -10,7 +10,7 @@ const Allorders = () => {
     const navigate = useNavigate();
 
     const [aodata, setAodata] = useState();
-    console.log(aodata)
+    // console.log(aodata)
 
     useEffect(() => {
 
@@ -43,8 +43,8 @@ const Allorders = () => {
                     aodata?.map((a) => {
 
                         const cd = new Date().toLocaleDateString("en-CA")
-                        console.log(cd)
-                        console.log(a.paymentdate)
+                        // console.log(cd)
+                        // console.log(a.paymentdate)
 
                         return (
                             <div className={mystyle.sub1}>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+
 import { Link, useNavigate, useParams } from "react-router";
 // import { useNavigate } from "react-router";
 import mystyle from './Addtocard.module.css';
@@ -8,13 +8,7 @@ import axios from "axios";
 
 
 const Addtocard = () => {
-    // const product = JSON.parse(localStorage.getItem("buyProduct"));
-
-    // const mystate = useSelector((state) => { return state.products })
-
-    // const location =useLocation();
-    // const product = location.state;
-    // console.log(product)
+   
 
     const { id } = useParams();
 
@@ -27,7 +21,7 @@ const Addtocard = () => {
     // const navigate = useNavigate();
 
     const [product, setProduct] = useState([])
-    console.log(product)
+    // console.log(product)
 
     useEffect(() => {
         axios.post(`https://al-cart-e-commers.onrender.com/getoneproduct/${id}`).then((success) => {
@@ -57,10 +51,10 @@ const Addtocard = () => {
 
     const getproduct = (product) => {
         console.log("product found")
-        console.log(product)
+        // console.log(product)
 
         let token = localStorage.getItem("token")
-        console.log(token)
+        // console.log(token)
 
         let pid = product._id;
         let sid = product.eid;
@@ -72,7 +66,7 @@ const Addtocard = () => {
         }).then((success) => {
             console.log(success)
             let oid = success.data.insertedId;
-            console.log(id)
+            // console.log(id)
             // navigate(`/Buyproduct/${id}`)
 
             axios.post("https://al-cart-e-commers.onrender.com/create-razorpay-order", { oid: oid, amount: totalprice }
@@ -158,21 +152,6 @@ const Addtocard = () => {
 
 
 
-
-                    // product.map((x) => {
-                    //     return (
-                    //         <div>
-                    //             <p>{x.id}</p>
-                    //             <img src={x.image} />
-                    //             <p>{x.name}</p>
-                    //             <p>{x.reviews}</p>
-                    //             <p>{x.desc}</p>
-                    //             <p>{x.price}</p>
-                    //         </div>
-                    //     )
-                    // })
-
-
                     product ? (
                         <div className={mystyle.pro}>
                             {/* <p>{user.username}</p> */}
@@ -194,16 +173,6 @@ const Addtocard = () => {
                     )
 
                 }
-
-                {/* {
-                    user ? (
-                        <div>
-                            <p>{user.username}</p>
-                        </div>
-                    ):(
-                        <p>not fund username</p>
-                    )
-                } */}
 
             </>
         </div >

@@ -40,8 +40,8 @@ const StoreSig = () => {
 
     const getData = () => {
 
-        console.log(name)
-        console.log(email)
+        // console.log(name)
+        // console.log(email)
 
         axios.post("https://al-cart-e-commers.onrender.com/storeadd", {
             name: name,

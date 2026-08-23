@@ -1,29 +1,70 @@
-import { useSelector } from "react-redux"
-import './Histry.css';
+import { useEffect, useState } from "react";
+import mystyle from "./Hostry.module.css";
+import axios from "axios";
 
 const Histry = () => {
-    const prohistry = useSelector((state) => { return state.Buyprodet })
-    console.log(prohistry);
-    return (
-        <div className="His-pro">
 
-            <h2>Product History</h2>
+    const [pdeli, setPdeli] = useState([]);
 
-            {
-                prohistry.map((x) => {
+    useEffect(() => {
 
-                    return (
-                        <div className="item-det">
-                            <p>{x.userid}</p>
-                            <img src={x.image} />
-                            <p>{x.proname}</p>
-                            <p>{x.count}</p>
-                            <p>{x.price}</p>
+        let token = localStorage.getItem("token")
+        // console.log("this is useeffect toekn :" + token)
 
-                        </div>
-                    )
-                })
+        axios.get("https://al-cart-e-commers.onrender.com/getallorders", {
+            headers: {
+                Authorization: `Bearer ${token}`
             }
+        }).then((success) => {
+            console.log(success)
+            setPdeli(success.data)
+        }).catch((error) => {
+            console.log(error)
+        })
+    }, [])
+
+    return (
+        <div className={mystyle.main}>
+
+            <button className={mystyle.btn1} onClick={Home}><i class="bi bi-house-door"></i></button>
+
+            <h1>History</h1>
+
+            <div className={mystyle.sub}>
+                {
+
+                    pdeli?.map((a) => {
+
+                        const cd = new Date().toLocaleDateString("en-CA")
+                        // console.log(cd)
+                        // console.log(a.paymentdate)
+
+                        return (
+                            <div className={mystyle.sub1}>
+                                <p>{a._id}</p>
+                                <p>{a.comfurmprodata.map((d) => {
+                                    return (
+                                        <div>
+                                            <img src={d.url} />
+                                            <p><b>{d.pname}</b></p>
+
+                                        </div>
+                                    )
+
+                                })}</p>
+                                <div className={mystyle.sub2}>
+                                    <p><b>Quantity :</b> {a.quantity}</p>
+                                    <p><b>Paid :</b> ₹{a.tprice}</p>
+                                </div>
+                                <p><b>status:</b> {cd === a.paymentdate ? (<span className='done'> <span>Order Placed</span></span>) : cd > a.paymentdate ? (<span>Shipping</span>) : (<span>Delivered</span>)}</p>
+                                <p>Expeted Delivary : {new Date(new Date(a.paymentdate).setDate(new Date(a.paymentdate).getDate() + 8)).toDateString()}</p>
+
+                            </div>
+                        )
+                    })
+                }
+
+            </div>
         </div>
     )
 }

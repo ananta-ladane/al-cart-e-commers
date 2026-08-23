@@ -36,8 +36,8 @@ const FindEmail = () => {
                     let id = success.data[0]._id;
                     let email = success.data[0].email;
 
-                    console.log(id)
-                    console.log(email)
+                    // console.log(id)
+                    // console.log(email)
 
                     navigate(`/userpassword/${id}`, { state: { Email: email } })
                 } else {

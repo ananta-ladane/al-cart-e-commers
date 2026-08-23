@@ -1,22 +1,20 @@
-import { useDispatch, useSelector } from 'react-redux';
+
 import mystyle from './PortalNav.module.css';
 // import Dropdown from 'react-bootstrap/Dropdown';
 import { Link, useNavigate } from 'react-router';
-import { actions } from '../store';
+
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 
 const PortalNav = () => {
-    const user = useSelector((state) => { return state.currentUser });
 
-    const id = user;
     // console.log(id)
     console.log("this is the usrid i found in portalnav")
 
     // const pcount = mydata.apcount;
 
-    const dispatcher = useDispatch();
+
     const navigate = useNavigate();
 
     const [show, setShow] = useState(false)
@@ -27,7 +25,7 @@ const PortalNav = () => {
 
     useEffect(() => {
         const token = localStorage.getItem("token")
-        axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", {headers:{Authorization: `Bearer ${token}`}}).then((success) => {
+        axios.get("https://al-cart-e-commers.onrender.com/getcardproduct", { headers: { Authorization: `Bearer ${token}` } }).then((success) => {
             console.log(success)
             setPdata(success.data)
         }).catch((error) => {
@@ -75,11 +73,15 @@ const PortalNav = () => {
         navigate("/allorders")
     }
 
+    const viewHistory = () => {
+        navigate("/allorders")
+    }
+
     return (
         <div className={mystyle.main}>
 
             {
-                show && <div className={mystyle.shows}> <p onClick={getProfile}>view profile</p> <p onClick={viewOrdes}>view order</p> <p>Histroy</p> <p onClick={logout}>logout</p> <button className={mystyle.clo} onClick={Close}>close</button></div>
+                show && <div className={mystyle.shows}> <p onClick={getProfile}>view profile</p> <p onClick={viewOrdes}>view order</p> <p onClick={viewHistory}>Histroy</p> <p onClick={logout}>logout</p> <button className={mystyle.clo} onClick={Close}>close</button></div>
             }
             <div className={mystyle.sub}>
                 <p className={mystyle.log}><i class="bi bi-bag"></i> AL<span>Cart</span></p>
