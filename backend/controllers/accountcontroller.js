@@ -195,7 +195,7 @@ exports.verifysession = (req, res) => {
 exports.userprofile = (req, res) => {
 
     let usereid = req.user.email;
-    console.log(userid)
+    console.log(usereid)
     console.log("this email get from verifyed token")
     let data = new Account();
 
