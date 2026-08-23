@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import mystyle from "./Histry.module.css";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 const Histry = () => {
 
     const [pdeli, setPdeli] = useState([]);
+
+    const navigate = useNavigate()
 
     useEffect(() => {
 
