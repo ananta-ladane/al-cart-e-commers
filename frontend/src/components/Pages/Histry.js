@@ -23,6 +23,10 @@ const Histry = () => {
         })
     }, [])
 
+    const Home = () => {
+        navigate("/poratlpage")
+    }
+
     return (
         <div className={mystyle.main}>
 
