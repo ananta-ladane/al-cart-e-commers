@@ -51,12 +51,12 @@ exports.accountnew = (req, res) => {
 
                         {
                             headers: {
-                                accept: "application/json",
+                                // accept: "application/json",
                                 "api-key": process.env.BREVO_API_KEY,
                                 "content-type": "application/json"
                             }
                         }
-                        
+
                     ).then((response) => {
                         console.log("Email sent:", response.data);
                     }).catch((error) => {
