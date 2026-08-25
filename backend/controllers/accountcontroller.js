@@ -66,7 +66,6 @@ exports.accountnew = (req, res) => {
                             error.response?.data || error.message
                         );
 
-                        throw error;
                     });
             
 
