@@ -248,10 +248,6 @@ exports.sellerprofi = (req, res) => {
 }
 
 
-
-
-
-
 exports.logout = (req, res) => {
 
     req.session.destroy(() => {
