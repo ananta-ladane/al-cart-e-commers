@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/al-cart-e-commers/static/css/main.67d30fc8.css",
+    "main.css": "/al-cart-e-commers/static/css/main.fdfbbb45.css",
     "main.js": "/al-cart-e-commers/static/js/main.1eaf1aab.js",
     "static/media/bootstrap-icons.woff?": "/al-cart-e-commers/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
     "static/media/bootstrap-icons.woff2?": "/al-cart-e-commers/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
     "index.html": "/al-cart-e-commers/index.html",
-    "main.67d30fc8.css.map": "/al-cart-e-commers/static/css/main.67d30fc8.css.map",
+    "main.fdfbbb45.css.map": "/al-cart-e-commers/static/css/main.fdfbbb45.css.map",
     "main.1eaf1aab.js.map": "/al-cart-e-commers/static/js/main.1eaf1aab.js.map"
   },
   "entrypoints": [
-    "static/css/main.67d30fc8.css",
+    "static/css/main.fdfbbb45.css",
     "static/js/main.1eaf1aab.js"
   ]
 }

@@ -2,7 +2,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createHashRouter, RouterProvider } from 'react-router';
 import Detiles from './components/Pages/Detiles';
 import Login from './components/auth/Login';
 import Addtocard from './components/Pages/Addtocard';
@@ -35,7 +35,7 @@ import SellerProfile from './components/storepages/SellerProfile.js';
 
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
 
 
   {
