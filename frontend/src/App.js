@@ -159,9 +159,7 @@ const router = createHashRouter([
 
 
 
-], {
-  basename: '/al-cart-e-commers'
-});
+]);
 
 function App() {
 
