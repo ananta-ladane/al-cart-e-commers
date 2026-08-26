@@ -56,9 +56,24 @@
 
 }
 
+.msgg {
+    position: absolute;
+    z-index: 1;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(132, 243, 102);
+    width: 90%;
+}
+
+.msgg p {
+    color: rgb(26, 25, 25);
+    font-weight: 700;
+}
+
 
 .sub {
-    width: 40%;
+    width: 90%;
     margin: 0px auto;
     text-align: center;
     padding: 30px 10px;
@@ -66,11 +81,7 @@
     box-shadow: 0 0 2px rgb(9, 9, 9);
     background-color: rgb(248, 250, 252);
 
-
 }
-
-
-
 
 .sub h2 {
     color: #1E293B;
@@ -96,4 +107,81 @@
     font-weight: 700;
     border: none;
     margin-top: 10px;
+}
+
+
+@media (min-width:576px) {
+
+    .mtemail,
+    .evemaill {
+        width: 30%;
+        left: 35%;
+    }
+
+    .msgg {
+        width: 70%;
+    }
+}
+
+@media (min-width:769px) {
+
+    .mtemail,
+    .evemaill {
+        width: 30%;
+        left: 35%;
+    }
+
+    .sub {
+        width: 60%;
+    }
+
+    .msgg {
+        width: 40%;
+    }
+}
+
+@media (min-width:992px) {
+    .sub {
+        width: 60%;
+    }
+
+    .msgg {
+        width: 50%;
+    }
+}
+
+@media (min-width:1200px) {
+    .sub {
+        width: 40%;
+    }
+
+
+    .mtemail,
+    .evemaill {
+        width: 30%;
+        left: 35%;
+    }
+
+       .msgg {
+        width: 30%;
+    }
+}
+
+@media (min-width:1400px) {
+    .sub {
+        width: 30%;
+    }
+
+
+    .mtemail,
+    .evemaill {
+        width: 30%;
+        left: 35%;
+    }
+
+       .msgg {
+        width: 25%;
+    }
+
+
 }

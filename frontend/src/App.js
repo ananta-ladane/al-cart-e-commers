@@ -58,7 +58,7 @@ const router = createHashRouter([
   },
 
   {
-    path: "/userpassword/:id",
+    path: "/userpassword",
     element: <ChangeUserpass />
   },
   {

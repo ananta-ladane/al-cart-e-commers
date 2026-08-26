@@ -1,6 +1,7 @@
 .main {
 
-    background-color: #9c97ec;
+
+    background-color: #f8fafc;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -8,13 +9,13 @@
 }
 
 .sub {
-    width: 40%;
+    width: 90%;
     margin: 0px auto;
     text-align: center;
     padding: 30px 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgb(9, 9, 9);
-    background-color: rgba(120, 118, 118, 0.5);
+    box-shadow: 0 0 3px rgb(9, 9, 9);
+    background-color: rgb(248, 250, 252);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
@@ -24,7 +25,7 @@
 
 
 .sub h2 {
-    color: rgb(247, 246, 246);
+    color: rgb(16, 16, 16);
 }
 
 .sub1 input {
@@ -33,6 +34,34 @@
     border-radius: 5px;
     margin-top: 8px;
     width: 80%;
+}
+
+.alert {
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    left: 15%;
+    border: 1px solid white;
+    background-color: rgb(229, 21, 21);
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    z-index: 2;
+
+}
+
+.alert p {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn1 {
+    background-color: rgb(248, 250, 252);
+    color: #64748B;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
 .btn2 {
@@ -45,4 +74,63 @@
     font-weight: 700;
     border: none;
     margin-top: 10px;
+}
+
+@media (min-width:769px) {
+
+    .sub {
+        width: 60%;
+    }
+
+
+}
+
+@media (min-width:992px) {
+
+    .sub {
+        width: 60%;
+    }
+
+    .alert {
+        width: 50%;
+        left: 25%;
+
+    }
+
+    .alert p {
+        font-weight: 700;
+    }
+
+}
+
+@media (min-width:1200px) {
+
+    .sub {
+        width: 60%;
+    }
+
+    .alert {
+        width: 50%;
+        left: 25%;
+
+    }
+
+    .alert p {
+        font-weight: 700;
+    }
+
+}
+
+@media (min-width:1400px) {
+
+    .sub {
+        width: 40%;
+    }
+
+    .alert {
+        width: 40%;
+        left: 30%;
+
+    }
+
 }

@@ -12,6 +12,7 @@ const FindEmail = () => {
     const [email, setEmail] = useState()
     const [vemail, setVemail] = useState(false)
     const [memail, setMemail] = useState(false)
+    const [msg, setMsg] = useState(false)
 
 
 
@@ -32,14 +33,14 @@ const FindEmail = () => {
                 console.log(success)
                 if (success.data.length > 0) {
                     console.log("Email verification successful.!")
-
-                    let id = success.data[0]._id;
-                    let email = success.data[0].email;
+                    setMsg(true)
+                    // let id = success.data[0]._id;
+                    // let email = success.data[0].email;
 
                     // console.log(id)
                     // console.log(email)
 
-                    navigate(`/userpassword/${id}`, { state: { Email: email } })
+                    // navigate("/userpassword", { state: { Email: email } })
                 } else {
                     setVemail(true)
                 }
@@ -53,6 +54,7 @@ const FindEmail = () => {
         console.log("ok")
         setMemail(false)
         setVemail(false)
+        setMsg(false)
     }
 
     return (
@@ -64,6 +66,10 @@ const FindEmail = () => {
 
             {
                 vemail && <div className={mystyle.evemaill}><p>plz Enter the valid email</p><button className={mystyle.btnok} onClick={close} >ok</button></div >
+            }
+
+            {
+                msg && <div className={mystyle.msgg}><p>Email verification successfull, Plz chack your email inbox</p><button className={mystyle.btnok} onClick={close}>ok</button></div>
             }
 
             <div className={mystyle.sub}>
