@@ -43,7 +43,7 @@ const ChangeUserpass = () => {
         } else {
 
 
-            axios.post("https://al-cart-e-commers.onrender.com/updatepass", {Eamil:email, Pass: cpass }).then((Success) => {
+            axios.post("https://al-cart-e-commers.onrender.com/updatepass", {Email:email, Pass: cpass }).then((Success) => {
                 console.log(Success)
                 if (Success.data.modifiedCount === 1) {
                     console.log("successfully update password")
@@ -71,7 +71,7 @@ const ChangeUserpass = () => {
             }
 
             {
-                bpass && <div className={mystyle.alert}><p>Please enter both passwords the same.</p><button className={mystyle.btn1} onClick={Close}>Ok</button></div>
+                bpass && <div className={mystyle.alert}><p>Please enter the both passwords  same.</p><button className={mystyle.btn1} onClick={Close}>Ok</button></div>
             }
             <div className={mystyle.sub}>
                 <h2>Chnage Password</h2>
