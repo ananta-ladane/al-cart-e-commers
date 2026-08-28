@@ -2,14 +2,14 @@ import mystyle from './Login.module.css'
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
+
 
 const Login = () => {
 
 
     // console.log(users);
 
-    const dispacher = useDispatch()
+  
     const navigate = useNavigate();
 
 
@@ -46,8 +46,8 @@ const Login = () => {
 
             axios.post("https://al-cart-e-commers.onrender.com/login", { email: email, password: upass, role: role }
             ).then((success) => {
-                console.log(success)
-                console.log(success.data.token)
+                // console.log(success)
+                // console.log(success.data.token)
 
                 if (success.data.status == false) {
                     setAlert(true)

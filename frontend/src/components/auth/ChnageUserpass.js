@@ -44,7 +44,7 @@ const ChangeUserpass = () => {
 
 
             axios.post("https://al-cart-e-commers.onrender.com/updatepass", {Email:email, Pass: cpass }).then((Success) => {
-                console.log(Success)
+                // console.log(Success)
                 if (Success.data.modifiedCount === 1) {
                     console.log("successfully update password")
                     naviget("/login")

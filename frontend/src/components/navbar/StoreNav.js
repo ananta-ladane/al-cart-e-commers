@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import mystyle from './StoreNav.module.css'
-import { Link, useNavigate } from 'react-router'
-import axios from 'axios'
+import { useNavigate } from 'react-router'
+
 
 
 const StoreNav = () => {

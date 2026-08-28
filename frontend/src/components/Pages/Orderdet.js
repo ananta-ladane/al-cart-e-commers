@@ -14,12 +14,12 @@ const Orderdet = () => {
     const navigate = useNavigate();
 
     const [odata, setOdata] = useState();
-    console.log(odata)
+    // console.log(odata)
 
     useEffect(() => {
 
         axios.get(`https://al-cart-e-commers.onrender.com/tractoder/${id}`).then((success) => {
-            console.log(success)
+            // console.log(success)
             setOdata(success.data)
         }).catch((error) => {
             console.log(error)
@@ -43,7 +43,7 @@ const Orderdet = () => {
                         odata?.map((o) => {
 
                             const cd = new Date().toLocaleDateString("en-CA")
-                            console.log(cd)
+                            // console.log(cd)
                             console.log(o.paymentdate)
 
                             return (

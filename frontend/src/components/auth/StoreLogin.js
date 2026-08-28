@@ -2,10 +2,10 @@
 import { useState } from 'react';
 import mystyle from './StoreLogin.module.css';
 import axios from 'axios';
-import Login from './Login';
+
 import { useNavigate } from 'react-router';
-import { useDispatch } from 'react-redux';
-import { actions } from '../store';
+
+
 
 const StoreLogin = () => {
 
@@ -14,7 +14,7 @@ const StoreLogin = () => {
     const [pass, setPass] = useState();
 
     const navigate = useNavigate();
-    const dispacher = useDispatch();
+    
 
     const getEmail = (event) => {
         setEmail(event.target.value)
@@ -30,14 +30,13 @@ const StoreLogin = () => {
         console.log(pass)
 
         axios.post("https://al-cart-e-commers.onrender.com/storelogin", { Email: email, Pass: pass }).then((success) => {
-            console.log(success)
+            // console.log(success)
             if (success.data.length > 0) {
                 console.log("login successfully")
                 let id = success.data[0]._id;
                 console.log(id)
                 navigate(`/storehomepage/${id}`)
-                dispacher(actions.addStoreid(id))
-
+               
             } else {
                 console.log("plz fill the valid deitals")
             }

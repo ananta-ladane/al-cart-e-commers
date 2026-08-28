@@ -8,12 +8,12 @@ const UserProfile = () => {
 
 
     const [profile, setProfile] = useState()
-    console.log(profile)
+    // console.log(profile)
 
     useEffect(() => {
         const token = localStorage.getItem("token");
 
-        console.log(token)
+        // console.log(token)
 
         axios.get("https://al-cart-e-commers.onrender.com/getuserprofile", {
             headers: {

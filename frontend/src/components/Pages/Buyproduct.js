@@ -18,7 +18,7 @@ const Buyproduct = () => {
     useEffect(() => {
 
         axios.get(`http://localhost:5000/comforproductdata/${id}`).then((success) => {
-            console.log(success)
+            // console.log(success)
             setOdata(success.data)
         }).catch((error) => {
             console.log(error)
@@ -26,7 +26,7 @@ const Buyproduct = () => {
     }, [])
 
     const [odata, setOdata] = useState()
-    console.log(odata)
+    // console.log(odata)
 
 
     // let date = new Date();
@@ -37,7 +37,7 @@ const Buyproduct = () => {
         let id = x._id
 
         axios.post(`https://al-cart-e-commers.onrender.com/dopayment/${id}`).then((success) => {
-            console.log(success)
+            // console.log(success)
 
             if (success.data.acknowledged == true) {
                 console.log("order conforma")

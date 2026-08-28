@@ -165,7 +165,7 @@ const HomeBody = () => {
                 <div className="container">
                     <div className={mystyle.foodi1}>
                         <div className={mystyle.foosub1}>
-                            <p className={mystyle.flog}><i class="bi bi-bag"></i> ALCert</p>
+                            <p className={mystyle.flog}><i class="bi bi-bag"></i> ALCart</p>
                             <p className={mystyle.we}>We curate the finest selection of global brands and premium products to elevate your everyday living experience</p>
                             <div className={mystyle.foosub1di1}>
                                 <p><i class="bi bi-facebook"></i></p>

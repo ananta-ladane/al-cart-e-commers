@@ -19,7 +19,7 @@ const Histry = () => {
                 Authorization: `Bearer ${token}`
             }
         }).then((success) => {
-            console.log(success)
+            // console.log(success)
             setPdeli(success.data)
         }).catch((error) => {
             console.log(error)

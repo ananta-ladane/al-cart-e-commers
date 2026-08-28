@@ -24,7 +24,7 @@ const AddCard = () => {
                 Authorization: `Bearer ${token}`
             }
         }).then((success) => {
-            console.log(success)
+            // console.log(success)
             setPdata(success.data)
         }).catch((error) => {
             console.log(error)
@@ -50,7 +50,7 @@ const AddCard = () => {
                 Authorization: `Bearer ${token}`
             }
         }).then((success) => {
-            console.log(success)
+            // console.log(success)
             if (success.data.acknowledged == true) {
                 navigate(0)
             }

@@ -25,7 +25,7 @@ const Addtocard = () => {
 
     useEffect(() => {
         axios.post(`https://al-cart-e-commers.onrender.com/getoneproduct/${id}`).then((success) => {
-            console.log(success)
+            // console.log(success)
             setProduct(success.data)
         }).catch((error) => {
             console.log(error)
@@ -72,7 +72,7 @@ const Addtocard = () => {
             axios.post("https://al-cart-e-commers.onrender.com/create-razorpay-order", { oid: oid, amount: totalprice }
                ).then((success) => {
 
-                console.log(success.data);
+                // console.log(success.data);
 
                 let razorpayOrder = success.data.order;
 
@@ -93,7 +93,7 @@ const Addtocard = () => {
 
                     handler: (response) => {
 
-                        console.log(response);
+                        console.log("payment successfull");
                         // navigate(`/Orderdet/${oid}`);
                         axios.post("https://al-cart-e-commers.onrender.com/verify-payment",
                             {
@@ -110,7 +110,7 @@ const Addtocard = () => {
                             }
 
                         ).then((success) => {
-                            console.log(success)
+                            // console.log(success)
                             if (success.data) {
                                 navigate(`/Orderdet/${oid}`);
                             }
@@ -127,10 +127,10 @@ const Addtocard = () => {
                 payment.open();
 
 
-                console.log("ENV KEY =", process.env.REACT_APP_RAZORPAY_KEY_ID);
-                console.log("OPTIONS KEY =", options.key);
-                console.log("ORDER ID =", options.order_id);
-                console.log("AMOUNT =", options.amount);
+                // console.log("ENV KEY =", process.env.REACT_APP_RAZORPAY_KEY_ID);
+                // console.log("OPTIONS KEY =", options.key);
+                // console.log("ORDER ID =", options.order_id);
+                // console.log("AMOUNT =", options.amount);
 
             }).catch((error) => {
                 console.log(error);

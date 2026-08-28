@@ -20,7 +20,7 @@ const PortalBody = () => {
         // console.log(lspdata);
 
         axios.get("https://serve.faux-api.com/5671dcdc6dcd56e6955de245/products").then((success) => {
-            console.log(success)
+            // console.log(success)
 
             let pdata = success.data.result
             dispacher(actions.localProductdata(pdata))

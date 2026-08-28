@@ -34,7 +34,7 @@ const Signup = () => {
     }
 
     const userSignup = () => {
-        console.log(uname, email, upass, role);
+        // console.log(uname, email, upass, role);
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
