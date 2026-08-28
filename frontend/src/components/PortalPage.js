@@ -23,7 +23,7 @@ const PortalPage = () => {
 
         const token = localStorage.getItem("token")
 
-        console.log(token)
+        // console.log(token)
         if (!token) {
             navigate("/login")
             console.log("token not fonund")

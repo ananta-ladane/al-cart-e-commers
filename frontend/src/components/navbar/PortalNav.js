@@ -10,7 +10,7 @@ import axios from 'axios';
 const PortalNav = () => {
 
     // console.log(id)
-    console.log("this is the usrid i found in portalnav")
+    // console.log("this is the usrid i found in portalnav")
 
     // const pcount = mydata.apcount;
 
