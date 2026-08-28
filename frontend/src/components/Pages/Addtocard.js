@@ -64,7 +64,7 @@ const Addtocard = () => {
                 Authorization: `Bearer ${token}`
             }
         }).then((success) => {
-            console.log(success)
+            // console.log(success)
             let oid = success.data.insertedId;
             // console.log(id)
             // navigate(`/Buyproduct/${id}`)

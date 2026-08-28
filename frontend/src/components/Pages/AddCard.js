@@ -43,7 +43,7 @@ const AddCard = () => {
     const getRem = (p) => {
         console.log(p._id)
         let token = localStorage.getItem("token")
-        console.log("this is the getRem token: " + token)
+        // console.log("this is the getRem token: " + token)
         let id = p._id;
         axios.delete(`https://al-cart-e-commers.onrender.com/delprocard/${id}`, {
             headers: {
